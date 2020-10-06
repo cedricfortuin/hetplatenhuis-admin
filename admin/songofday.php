@@ -15,7 +15,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
-if($username['USER_ROLE'] == 3)
+if($username['USER_ROLE'] === 'visitor')
 {
     $disabled = 'disabled';
 } else {

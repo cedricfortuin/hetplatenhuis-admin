@@ -93,14 +93,12 @@ include '_layouts/_layout-header.phtml';
                             </table>
                         </div>
                     </div>
-                </div>
-                <section class="content-section">
-
-                    <div class="container">
-                        <div class="row">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p><i>Hier komen de statistieken van de webshop te staan!</i></p>
                         </div>
                     </div>
-                </section>
+                </div>
             </section>
         </div>
     </div>
