@@ -17,7 +17,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 $result = mysqli_query($link, "SELECT * FROM users ORDER BY USER_ID ASC");
-
 if($username['USER_ROLE'] === 'visitor')
 {
     $disabled = 'disabled';
@@ -43,6 +42,7 @@ include '_layouts/_layout-header.phtml';
                                         <th scope="col">Email</th>
                                         <th scope="col">Voornaam</th>
                                         <th scope="col">Gebruikersnaam</th>
+                                        <th scope="col">Rol</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                         <?php
@@ -62,6 +62,17 @@ include '_layouts/_layout-header.phtml';
                                         <td><a href="mailto:<?php echo $row["USER_EMAIL"]; ?>"><?php echo $row["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $row["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $row["USERNAME"]; ?></td>
+                                        <td><?php $user_role = $row['USER_ROLE'];
+                                            switch ($user_role) {
+                                                case "admin":
+                                                    echo '<i class="fas fa-user-lock"></i>';
+                                                    break;
+                                                case "subadmin":
+                                                    echo '<i class="fas fa-user-check"></i>';
+                                                    break;
+                                                case "visitor":
+                                                    echo '<i class="fas fa-eye"></i>';
+                                            } ?></td>
                                         <td></td>
                                         <td></td>
                                         <?php
