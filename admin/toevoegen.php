@@ -18,7 +18,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 $disabled = '';
 
-if($username['USER_ROLE'] === 'visitor' || 'subadmin')
+if($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin')
 {
     $disabled = 'disabled';
 }
