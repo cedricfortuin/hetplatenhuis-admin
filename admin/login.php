@@ -122,11 +122,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h4 class="text-dark mb-4"><?php echo "Welkom!" ?></h4>
+                                    <h4 class="text-dark mb-4">Welkom!</h4>
                                 </div>
                                 <div class="login-form">
                                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                                        <h4 class="modal-title text-center">Login met je admin account</h4><br>
+                                        <h4 class="modal-title text-center">Login met je admin account</h4><br/>
                                         <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                                             <label for="email-label">Gebruikersnaam</label>
                                             <input id="email-label" type="text" name="username" class="form-control"
@@ -140,7 +140,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </div>
                                         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
                                         <div class="text-sm-center"><br>
-                                            <a href="mailto:administrator@hetplatenhuis.nl">Wachtwoord vergeten?</a>
+                                            <a href="mailto:administrator@hetplatenhuis.nl">Wachtwoord vergeten?</a><br/>
+                                            <small>Let op, we zetten cookies neer om je te kunnen inloggen!</small>
                                         </div>
                                         <br>
                                         <p class="help-block text-center"
