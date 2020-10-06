@@ -139,7 +139,7 @@ include '_layouts/_layout-header.phtml';
                                     $i++;
                                     }
                                     if ($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin'){
-                                        echo '<div><p class="alert alert-warning text-center alert-dismissible">Je mag helaas de beheerders niet aanpassen of verwijderen. Je kan wel je eigen account aanpassen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
+                                        echo '<div><p class="alert alert-warning text-center alert-dismissible">Je mag helaas de beheerders niet aanpassen of verwijderen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
                                     }
                                     ?>
                                     </tbody>
