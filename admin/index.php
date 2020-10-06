@@ -20,11 +20,24 @@ include '_layouts/_layout-header.phtml';
         <div class="container-fluid">
             <section class="content-section" style="color: black;">
                 <div class="container">
+                    <p class="alert alert-primary">De adminomgeving is vernieuwd! Kijk gauw rond!</p>
                     <div class="row">
                         <div class="col-md-8">
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                 <h3 class="text-dark mb-0">Dashboard</h3>
                             </div>
+                            <p>Je bent
+                                <?php $user_role = $username['USER_ROLE'];
+                                switch ($user_role) {
+                                    case "admin":
+                                        echo 'administrator.</p>';
+                                        break;
+                                    case "subadmin":
+                                        echo 'beheerder.</p>';
+                                        break;
+                                    case "visitor":
+                                        echo 'bezoeker.</p>';
+                                } ?>
                             <p><?php echo "Welkom " . $username['USER_FIRSTNAME']; ?> bij het admin-paneel. Hier kun je
                                 als admin het volgende doen: </p>
                             <ul>
@@ -38,11 +51,12 @@ include '_layouts/_layout-header.phtml';
                                 </li>
                                 <?php
 
-                                if ($username['USER_ROLE'] != 1) {
-                                    echo '<li>Je hebt helaas niet de bevoegdheden om gebruikers toe te voegen of te wijzigen <br/><i>(je eigen account wel)</i></li>';
+                                if ($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin') {
+                                    echo '<li>Je hebt helaas niet de bevoegdheden om gebruikers toe te voegen of te wijzigen</li>';
                                 } else {
                                     ?>
                                     <li>Nieuwe <a href="toevoegen.php">gebruikers</a> aanmaken</li>
+                                    <li>Huidige <a href="huidige-profielen.php">gebruikers</a> bewerken/verwijderen</li>
                                     <?php
                                 } ?>
                             </ul>

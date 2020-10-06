@@ -15,6 +15,31 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
     exit;
 }
+
+$UPDATE_SUCCESS = false;
+if (isset($_GET['UPDATE_SUCCESS']))
+{
+    $UPDATE_SUCCESS = true;
+} elseif (!isset($_GET['UPDATE_SUCCESS']))
+{
+    $UPDATE_SUCCESS = false;
+} else {
+    $UPDATE_SUCCESS = false;
+}
+
+$DELETE_SUCCESS = false;
+if (isset($_GET['DELETE_SUCCESS']))
+{
+    $DELETE_SUCCESS = true;
+} elseif (!isset($_GET['DELETE_SUCCESS']))
+{
+    $DELETE_SUCCESS = false;
+} else {
+    $DELETE_SUCCESS = false;
+}
+
+
+
 if($username['USER_ROLE'] === 'visitor')
 {
     $disabled = 'disabled';
@@ -39,6 +64,18 @@ if ($stmt = $link->prepare('SELECT * FROM songofday ORDER BY SONG_ID DESC LIMIT 
     <div class="container-fluid">
         <section class="content-section">
             <div class="container">
+                <?php
+                if ($UPDATE_SUCCESS) { ?>
+                    <p class="alert alert-success alert-dismissible">Het nummer is succesvol toegevoegd!
+                        <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
+                    </p>
+                <?php }
+                if ($DELETE_SUCCESS) { ?>
+                    <p class="alert alert-success alert-dismissible">Het nummer is succesvol verwijderd!
+                        <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
+                    </p>
+                <?php }
+                ?>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-row col-6 text-center">

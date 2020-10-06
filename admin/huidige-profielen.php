@@ -16,6 +16,40 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
+$UPDATE_SUCCESS = false;
+if (isset($_GET['UPDATE_SUCCESS']))
+{
+    $UPDATE_SUCCESS = true;
+} elseif (!isset($_GET['UPDATE_SUCCESS']))
+{
+    $UPDATE_SUCCESS = false;
+} else {
+    $UPDATE_SUCCESS = false;
+}
+
+$ADD_SUCCESS = false;
+if (isset($_GET['ADD_SUCCESS']))
+{
+    $ADD_SUCCESS = true;
+} elseif (!isset($_GET['ADD_SUCCESS']))
+{
+    $ADD_SUCCESS = false;
+} else {
+    $ADD_SUCCESS = false;
+}
+
+$DELETE_SUCCESS = false;
+if (isset($_GET['DELETE_SUCCESS']))
+{
+    $DELETE_SUCCESS = true;
+} elseif (!isset($_GET['DELETE_SUCCESS']))
+{
+    $DELETE_SUCCESS = false;
+} else {
+    $DELETE_SUCCESS = false;
+}
+
+
 $result = mysqli_query($link, "SELECT * FROM users ORDER BY USER_ID ASC");
 if($username['USER_ROLE'] === 'visitor')
 {
@@ -28,6 +62,21 @@ include '_layouts/_layout-header.phtml';
 ?>
             <section class="content-section">
                 <div class="container">
+                    <?php
+                    if ($UPDATE_SUCCESS)
+                        { ?>
+                            <p class="alert alert-success alert-dismissible">De gebruiker is succesvol aangepast!<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p>
+                       <?php }
+                    if ($ADD_SUCCESS)
+                    { ?>
+                        <p class="alert alert-success alert-dismissible">De gebruiker is succesvol toegevoegd!<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p>
+                    <?php }
+                    if ($DELETE_SUCCESS) { ?>
+                        <p class="alert alert-success alert-dismissible">De beheerder is succesvol verwijderd!
+                            <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
+                        </p>
+                    <?php }
+                    ?>
                     <div class="row">
                         <div class="col-md-12 mx-auto">
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
@@ -62,16 +111,16 @@ include '_layouts/_layout-header.phtml';
                                         <td><a href="mailto:<?php echo $row["USER_EMAIL"]; ?>"><?php echo $row["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $row["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $row["USERNAME"]; ?></td>
-                                        <td><?php $user_role = $row['USER_ROLE'];
+                                        <td class="text-center"><?php $user_role = $row['USER_ROLE'];
                                             switch ($user_role) {
                                                 case "admin":
-                                                    echo '<i class="fas fa-user-lock"></i>';
+                                                    echo '<i class="fas fa-user-lock" id="admin"></i>';
                                                     break;
                                                 case "subadmin":
-                                                    echo '<i class="fas fa-user-check"></i>';
+                                                    echo '<i class="fas fa-user-check" id="subadmin"></i>';
                                                     break;
                                                 case "visitor":
-                                                    echo '<i class="fas fa-eye"></i>';
+                                                    echo '<i class="fas fa-eye" id="visitor"></i>';
                                             } ?></td>
                                         <td></td>
                                         <td></td>
@@ -90,7 +139,7 @@ include '_layouts/_layout-header.phtml';
                                     $i++;
                                     }
                                     if ($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin'){
-                                        echo '<div><p class="alert alert-warning text-center alert-dismissible">Je mag helaas de beheerders niet aanpassen of verwijderen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
+                                        echo '<div><p class="alert alert-warning text-center alert-dismissible">Je mag helaas de beheerders niet aanpassen of verwijderen. Je kan wel je eigen account aanpassen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
                                     }
                                     ?>
                                     </tbody>

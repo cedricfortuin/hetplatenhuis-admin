@@ -8,7 +8,7 @@ include '_layouts/_layout-nopage.phtml';?>
                                 $sql = "DELETE FROM songofday WHERE SONG_ID='" . $_GET["SONG_ID"] . "'";
 
                                 if (mysqli_query($link, $sql)) {
-                                    echo "<div class='col-md-10 mx-auto alert alert-success text-center'>Het nummer is succesvol verwijderd. Ga terug.</div>";
+                                    echo "<script>window.location.href='songofday.php?DELETE_SUCCESS=true'</script>";
                                 } else {
                                     echo "Oops, something went wrong: " . mysqli_error($link);
                                 }

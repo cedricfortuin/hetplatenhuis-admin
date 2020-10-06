@@ -16,7 +16,7 @@
                     // Attempt insert query execution
                     $sql = "INSERT INTO songofday (SONG_NAME, SONG_ARTIST, SPOTIFY_LINK, SONG_REASON) VALUES ('$first_name', '$last_name', '$spotify_link', '$song_reason')";
                     if (mysqli_query($link, $sql)) {
-                        echo "<div class='col-md-10 mx-auto alert alert-success text-center'>Het nummer is succesvol toegevoegd. Ga terug.</div>";
+                        echo "<script>window.location.href='songofday.php?UPDATE_SUCCESS=true'</script>";
                     } else {
                         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
                     }

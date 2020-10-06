@@ -38,7 +38,7 @@
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label for="userrole">Gebruikersrol</label>
-                                                    <select id="userrole" class="form-control" name="userrole-edit">
+                                                    <select id="userrole" class="form-control <?php echo $disabled?>" name="userrole-edit">
                                                         <option class="nav-item" value="admin" <?= ($row['USER_ROLE'] === 'admin') ? 'selected':''; ?>>Administrator</option>
                                                         <option class="nav-item" value="subadmin" <?= ($row['USER_ROLE'] === 'subadmin') ? 'selected':''; ?>>Beheerder</option>
                                                         <option class="nav-item" value="visitor" <?= ($row['USER_ROLE'] === 'visitor') ? 'selected':''; ?>>Bezoeker</option>
