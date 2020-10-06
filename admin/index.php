@@ -10,6 +10,18 @@ include 'config/config.php';
 $new_sql = mysqli_query($link, "SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
 $username = mysqli_fetch_array($new_sql);
 
+$user_role = $username['USER_ROLE'];
+switch ($user_role) {
+    case "admin":
+        $role = 'administrator';
+        break;
+    case "subadmin":
+        $role = 'beheerder';
+        break;
+    case "visitor":
+        $role = 'bezoeker';
+}
+
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
@@ -26,40 +38,36 @@ include '_layouts/_layout-header.phtml';
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                 <h3 class="text-dark mb-0">Dashboard</h3>
                             </div>
-                            <p>Je bent
-                                <?php $user_role = $username['USER_ROLE'];
-                                switch ($user_role) {
-                                    case "admin":
-                                        echo 'administrator.</p>';
-                                        break;
-                                    case "subadmin":
-                                        echo 'beheerder.</p>';
-                                        break;
-                                    case "visitor":
-                                        echo 'bezoeker.</p>';
-                                } ?>
                             <p><?php echo "Welkom " . $username['USER_FIRSTNAME']; ?> bij het admin-paneel. Hier kun je
-                                als admin het volgende doen: </p>
-                            <ul>
-                                <li>Het <a href="songofday.php">nummer van
-                                        de dag</a>
-                                    toevoegen / verwijderen
-                                </li>
-                                <li>Een <a href="update-maker.php">update</a> over de
-                                    website
-                                    toevoegen / verwijderen
-                                </li>
-                                <?php
-
-                                if ($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin') {
-                                    echo '<li>Je hebt helaas niet de bevoegdheden om gebruikers toe te voegen of te wijzigen</li>';
-                                } else {
-                                    ?>
-                                    <li>Nieuwe <a href="toevoegen.php">gebruikers</a> aanmaken</li>
-                                    <li>Huidige <a href="huidige-profielen.php">gebruikers</a> bewerken / verwijderen</li>
+                                als <?php echo $role?> het volgende doen: </p>
+                            <?php
+                            if ($username['USER_ROLE'] !== 'visitor') { ?>
+                                <ul>
+                                    <li>Het <a href="songofday.php">nummer van
+                                            de dag</a>
+                                        toevoegen / verwijderen
+                                    </li>
+                                    <li>Een <a href="update-maker.php">update</a> over de
+                                        website
+                                        toevoegen / verwijderen
+                                    </li>
                                     <?php
-                                } ?>
-                            </ul>
+                                    if ($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin') {
+                                        echo '<li>Je hebt helaas niet de bevoegdheden om gebruikers toe te voegen of te wijzigen</li>';
+                                    } else {
+                                        ?>
+                                        <li>Nieuwe <a href="toevoegen.php">gebruikers</a> aanmaken</li>
+                                        <li>Huidige <a href="huidige-profielen.php">gebruikers</a> bewerken /
+                                            verwijderen
+                                        </li>
+                                        <?php
+                                    } ?>
+                                </ul>
+                            <?php } else { ?>
+                                <ul>
+                                    <li>Als <?php echo $role?> kun je alleen dingen bekijken, niks aanpassen of toevoegen.</li>
+                                </ul>
+                            <?php } ?>
                         </div>
                     </div>
                     <br><br>
