@@ -16,7 +16,7 @@ $username = mysqli_fetch_array($new_sql);
 
 $disabled = '';
 
-if($username['USER_ROLE'] != 1)
+if($username['USER_ROLE'] === 'visitor' || 'subadmin')
 {
     $disabled = 'disabled';
 }

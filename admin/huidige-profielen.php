@@ -59,7 +59,7 @@ include '_layouts/_layout-header.phtml';
                                         <td></td>
                                         <?php
                                         $showAlert = false;
-                                        if($username['USER_ROLE'] == 1)
+                                        if($username['USER_ROLE'] === 'admin')
                                         { ?>
                                             <td><a
                                                         href="edit-profiles.php?USER_FIRSTNAME=<?php echo $row["USER_FIRSTNAME"]; ?>">Bewerken</a></td>

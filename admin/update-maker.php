@@ -16,10 +16,11 @@ include 'config/config.php';
 $new_sql = mysqli_query($link, "SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
 $username = mysqli_fetch_array($new_sql);
 
-if($username['USER_ROLE'] == 3)
+$disabled = '';
+
+if($username['USER_ROLE'] === 'visitor')
 {
-    header('location: no-permission.php');
-    exit;
+    $disabled = 'disabled';
 }
 
 include '_layouts/_layout-header.phtml';
@@ -39,22 +40,22 @@ include '_layouts/_layout-header.phtml';
                                     <div class="form-group col-md-6">
                                         <label for="inputName">Titel</label>
                                         <input type="text" class="form-control" name="title" id="inputName"
-                                               autocomplete="off">
+                                               autocomplete="off" <?php echo $disabled ?>>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCompany">Auteur</label>
                                         <input type="text" class="form-control" name="author" id="inputCompany"
-                                               autocomplete="off">
+                                               autocomplete="off" <?php echo $disabled ?>>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputEmail">Tekst om weer te geven</label>
                                         <textarea style="resize: none;height: 200px;" type="text" class="form-control" name="text"
-                                                  id="inputEmail" autocomplete="off"></textarea>
+                                                  id="inputEmail" autocomplete="off" <?php echo $disabled ?>></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-outline-primary">Uploaden</button>
+                                <button type="submit" class="btn btn-outline-primary" <?php echo $disabled ?>>Uploaden</button>
                                 <br>
                             </form>
                         </div>
@@ -89,10 +90,10 @@ include '_layouts/_layout-header.phtml';
                                     <td><?php echo $row["UPLOAD_DATE"]; ?></td>
                                     <td><?php echo $row["POST_TEXT"]; ?></td>
                                     <td><a
-                                                href="edit-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Bewerken</a>
+                                                href="edit-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>" <?php echo $disabled ?>>Bewerken</a>
                                     </td>
                                     <td><a
-                                           href="delete-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Verwijderen</a>
+                                           href="delete-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>" <?php echo $disabled ?>>Verwijderen</a>
                                     </td>
                                 </tr>
                                 <?php
