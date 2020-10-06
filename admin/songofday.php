@@ -83,30 +83,32 @@ if ($stmt = $link->prepare('SELECT * FROM songofday ORDER BY SONG_ID DESC LIMIT 
                                 <?php echo 'Aantal nummers van de dag: ' .  $link->query('SELECT * FROM songofday')->num_rows . " nummers."?>
                             </div>
                         </div>
-                        <table class="table" style="color: black;">
-                            <tr>
-                                <th>Nummer</th>
-                                <th>Band/artiest</th>
-                                <th>Upload datum</th>
-                                <th></th>
-                            </tr>
-                            <?php while ($row = $result->fetch_assoc()): ?>
+                        <div class="table-responsive">
+                            <table class="table" style="color: black;">
                                 <tr>
-                                    <td><?php echo $row['SONG_NAME']; ?></td>
-                                    <td><?php echo $row['SONG_ARTIST']; ?></td>
-                                    <td><?php echo $row['UPLOAD_DATE']; ?></td>
-                                    <?php
-                                    if ($username['USER_ROLE'] !== 'visitor')
-                                    { ?>
-                                        <td><a
-                                                    href="delete-song.php?SONG_ID=<?php echo $row["SONG_ID"] ?>">Verwijderen</a>
-                                        </td>
-                                    <?php }
-
-                                    ?>
+                                    <th>Nummer</th>
+                                    <th>Band/artiest</th>
+                                    <th>Upload datum</th>
+                                    <th></th>
                                 </tr>
-                            <?php endwhile; ?>
-                        </table>
+                                <?php while ($row = $result->fetch_assoc()): ?>
+                                    <tr>
+                                        <td><?php echo $row['SONG_NAME']; ?></td>
+                                        <td><?php echo $row['SONG_ARTIST']; ?></td>
+                                        <td><?php echo $row['UPLOAD_DATE']; ?></td>
+                                        <?php
+                                        if ($username['USER_ROLE'] !== 'visitor')
+                                        { ?>
+                                            <td><a
+                                                        href="delete-song.php?SONG_ID=<?php echo $row["SONG_ID"] ?>">Verwijderen</a>
+                                            </td>
+                                        <?php }
+
+                                        ?>
+                                    </tr>
+                                <?php endwhile; ?>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <div class="row">

@@ -70,44 +70,46 @@ include '_layouts/_layout-header.phtml';
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 mx-auto">
-                            <table class="table" style="color:black;">
-                                <tr>
-                                    <th scope="col">Titel</th>
-                                    <th scope="col">Tekst</th>
-                                    <th scope="col">Datum</th>
-                                    <th scope="col">Auteur</th>
-                                    <th scope="col"></th>
-                                    <th scope="col"></th>
-                                </tr>
-                                <?php
-                                $i = 0;
-                                while ($row = mysqli_fetch_array($result)) {
-                                ?>
-                                <tbody style="color: black">
-                                <tr>
-                                    <td><?php echo $row["POST_TITLE"]; ?></td>
-                                    <td><?php echo $row["POST_AUTHOR"]; ?></td>
-                                    <td><?php echo $row["UPLOAD_DATE"]; ?></td>
-                                    <td><?php echo $row["POST_TEXT"]; ?></td>
+                            <div class="table-responsive">
+                                <table class="table" style="color:black;">
+                                    <tr>
+                                        <th scope="col">Titel</th>
+                                        <th scope="col">Tekst</th>
+                                        <th scope="col">Datum</th>
+                                        <th scope="col">Auteur</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     <?php
-                                    if ($username['USER_ROLE'] !== 'visitor')
-                                    { ?>
-                                        <td><a
-                                                    href="edit-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Bewerken</a>
-                                        </td>
-                                        <td><a
-                                                    href="delete-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Verwijderen</a>
-                                        </td>
-                                   <?php }
-
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_array($result)) {
                                     ?>
-                                </tr>
-                                <?php
-                                $i++;
-                                }
-                                ?>
-                                </tbody>
-                            </table>
+                                    <tbody style="color: black">
+                                    <tr>
+                                        <td><?php echo $row["POST_TITLE"]; ?></td>
+                                        <td><?php echo $row["POST_AUTHOR"]; ?></td>
+                                        <td><?php echo $row["UPLOAD_DATE"]; ?></td>
+                                        <td><?php echo $row["POST_TEXT"]; ?></td>
+                                        <?php
+                                        if ($username['USER_ROLE'] !== 'visitor')
+                                        { ?>
+                                            <td><a
+                                                        href="edit-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Bewerken</a>
+                                            </td>
+                                            <td><a
+                                                        href="delete-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Verwijderen</a>
+                                            </td>
+                                        <?php }
+
+                                        ?>
+                                    </tr>
+                                    <?php
+                                    $i++;
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

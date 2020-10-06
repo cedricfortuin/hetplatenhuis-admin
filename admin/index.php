@@ -56,7 +56,7 @@ include '_layouts/_layout-header.phtml';
                                 } else {
                                     ?>
                                     <li>Nieuwe <a href="toevoegen.php">gebruikers</a> aanmaken</li>
-                                    <li>Huidige <a href="huidige-profielen.php">gebruikers</a> bewerken/verwijderen</li>
+                                    <li>Huidige <a href="huidige-profielen.php">gebruikers</a> bewerken / verwijderen</li>
                                     <?php
                                 } ?>
                             </ul>
