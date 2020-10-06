@@ -58,9 +58,15 @@ if ($stmt = $link->prepare('SELECT * FROM songofday ORDER BY SONG_ID DESC LIMIT 
                                     <td><?php echo $row['SONG_NAME']; ?></td>
                                     <td><?php echo $row['SONG_ARTIST']; ?></td>
                                     <td><?php echo $row['UPLOAD_DATE']; ?></td>
-                                    <td><a
-                                                href="delete-song.php?SONG_ID=<?php echo $row["SONG_ID"] ?>">Verwijderen</a>
-                                    </td>
+                                    <?php
+                                    if ($username['USER_ROLE'] !== 'visitor')
+                                    { ?>
+                                        <td><a
+                                                    href="delete-song.php?SONG_ID=<?php echo $row["SONG_ID"] ?>">Verwijderen</a>
+                                        </td>
+                                    <?php }
+
+                                    ?>
                                 </tr>
                             <?php endwhile; ?>
                         </table>
