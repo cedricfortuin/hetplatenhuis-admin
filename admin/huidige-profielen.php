@@ -18,6 +18,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 $result = mysqli_query($link, "SELECT * FROM users ORDER BY USER_ID ASC");
 
+if($username['USER_ROLE'] === 'visitor')
+{
+    $disabled = 'disabled';
+} else {
+    $disabled = '';
+}
+
 include '_layouts/_layout-header.phtml';
 ?>
             <section class="content-section">
@@ -39,7 +46,7 @@ include '_layouts/_layout-header.phtml';
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                         <?php
-                                        if ($username['USER_ROLE'] == 1) {
+                                        if ($username['USER_ROLE'] === 'admin') {
                                             echo '<th scope="col"></th>';
                                             echo '<th scope="col"></th>';
                                         }
@@ -62,19 +69,16 @@ include '_layouts/_layout-header.phtml';
                                         if($username['USER_ROLE'] === 'admin')
                                         { ?>
                                             <td><a
-                                                        href="edit-profiles.php?USER_FIRSTNAME=<?php echo $row["USER_FIRSTNAME"]; ?>">Bewerken</a></td>
+                                                        href="edit-profiles.php?USER_ID=<?php echo $row["USER_ID"]; ?>">Bewerken</a></td>
                                             <td><a
                                                         href="delete-admin.php?USER_ID=<?php echo $row["USER_ID"]; ?>">Verwijderen</a>
                                             </td>
-                                        <?php } else {
-                                            $showAlert = true;
-                                        }
-                                        ?>
+                                        <?php } ?>
                                     </tr>
                                     <?php
                                     $i++;
                                     }
-                                    if ($showAlert){
+                                    if ($username['USER_ROLE'] === 'visitor' || $username['USER_ROLE'] === 'subadmin'){
                                         echo '<div><p class="alert alert-warning text-center alert-dismissible">Je mag helaas de beheerders niet aanpassen of verwijderen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
                                     }
                                     ?>

@@ -14,7 +14,7 @@
                     $text = mysqli_real_escape_string($link, $_REQUEST['author-edit']);
 
                     // Attempt insert query execution
-                    $sql = "UPDATE posts SET POST_TITLE =  '".$title."' , POST_AUTHOR = '".$author."', POST_TEXT = '".$text."'  WHERE POST_TITLE = '". $_SESSION['post-edit'] ."'";
+                    $sql = "UPDATE posts SET POST_TITLE =  '".$title."' , POST_AUTHOR = '".$author."', POST_TEXT = '".$text."'  WHERE POST_ID = '". $_GET['POST_ID'] ."'";
                     if (mysqli_query($link, $sql)) {
                         echo "<div class='col-md-10 mx-auto alert alert-success text-center'>De post is succesvol gewijzigd!</div>";
                     } else {

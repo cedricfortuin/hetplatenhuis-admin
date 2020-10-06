@@ -16,7 +16,7 @@
                     $email = mysqli_real_escape_string($link, $_REQUEST['email-edit']);
 
                     // Attempt insert query execution
-                    $sql = "UPDATE users SET USERNAME =  '".$username."' , USER_FIRSTNAME = '".$first_name."', USER_ROLE = '".$user_role. "', USER_LASTNAME = '".$last_name."', USER_EMAIL = '".$email."'  WHERE USER_FIRSTNAME = '". $_GET['USER_ID'] ."'";
+                    $sql = "UPDATE users SET USERNAME =  '".$username."' , USER_FIRSTNAME = '".$first_name."', USER_ROLE = '" .$user_role. "', USER_LASTNAME = '".$last_name."', USER_EMAIL = '".$email."'  WHERE USER_ID = '". $_GET['USER_ID'] ."'";
                     if (mysqli_query($link, $sql)) {
                         echo "<div class='col-md-10 mx-auto alert alert-success text-center'>Beheerder succesvol gewijzigd! Ga terug.</div>";
                     } else {

@@ -8,7 +8,6 @@
                 </div>
             </div>
             <section class="content-section">
-
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 mx-auto">
@@ -16,12 +15,10 @@
                                 <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                     <h3 class="text-dark mb-0">Post aanpassen</h3>
                                 </div>
-                                <form action="post-edit-handler.php" method="post">
+                                <form action="post-edit-handler.php?POST_ID=<?php echo $_GET["POST_ID"]; ?>" method="post">
                                     <?php
                                     $result = mysqli_query($link, "SELECT * FROM posts WHERE POST_ID='" . $_GET['POST_ID'] . "'");
                                     $row = mysqli_fetch_array($result);
-
-                                    $_SESSION['post-edit'] = $_GET['POST_ID'];
                                     ?>
                                     <div class="row">
                                         <div class="form-group col-md-6">

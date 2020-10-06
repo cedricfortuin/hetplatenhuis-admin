@@ -89,12 +89,18 @@ include '_layouts/_layout-header.phtml';
                                     <td><?php echo $row["POST_AUTHOR"]; ?></td>
                                     <td><?php echo $row["UPLOAD_DATE"]; ?></td>
                                     <td><?php echo $row["POST_TEXT"]; ?></td>
-                                    <td><a
-                                                href="edit-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>" <?php echo $disabled ?>>Bewerken</a>
-                                    </td>
-                                    <td><a
-                                           href="delete-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>" <?php echo $disabled ?>>Verwijderen</a>
-                                    </td>
+                                    <?php
+                                    if ($username['USER_ROLE'] !== 'visitor')
+                                    { ?>
+                                        <td><a
+                                                    href="edit-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Bewerken</a>
+                                        </td>
+                                        <td><a
+                                                    href="delete-posts.php?POST_ID=<?php echo $row["POST_ID"]; ?>">Verwijderen</a>
+                                        </td>
+                                   <?php }
+
+                                    ?>
                                 </tr>
                                 <?php
                                 $i++;

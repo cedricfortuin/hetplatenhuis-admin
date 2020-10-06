@@ -47,17 +47,21 @@ include '_layouts/_layout-header.phtml';
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-4">
                                         <label for="username">Gebruikersnaam</label>
                                         <input id="username" type="text" name="username" autocomplete="off" class="form-control" <?php echo $disabled ?>>
                                     </div>
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-4">
                                         <label for="email">Email</label>
                                         <input id="email" type="text" name="email" autocomplete="off" class="form-control" <?php echo $disabled ?>>
                                     </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="rol">Rol</label>
-                                        <input id="rol" type="number" name="user_role" min="1" minlength="1" max="3" maxlength="1" autocomplete="off" class="form-control" <?php echo $disabled ?>>
+                                    <div class="form-group col-md-4">
+                                        <label for="userrole">Gebruikersrol</label>
+                                        <select id="userrole" class="form-control" name="user_role" <?php echo $disabled ?>>
+                                            <option class="nav-item" value="admin">Administrator</option>
+                                            <option class="nav-item" value="subadmin">Beheerder</option>
+                                            <option class="nav-item" value="visitor">Bezoeker</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
