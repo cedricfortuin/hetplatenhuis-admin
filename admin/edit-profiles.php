@@ -12,14 +12,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 mx-auto">
-                                    <div class="login-form">
+                                    <div class="login-form <?php echo $disabled?>">
                                         <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                             <h3 class="text-dark mb-0">Gebruiker aanpassen</h3>
                                         </div>
                                         <div>
                                             <p><?php echo 'Je staat op het punt om <i>' . $_GET['USER_FIRSTNAME'] . '</i> aan te passen. Dit heeft effect in de database!'?></p>
                                         </div>
-                                        <form action="edit-profiles-handler.php" method="post">
+                                        <form action="edit-profiles-handler.php?USER_ID=<?php echo $_GET['USER_FIRSTNAME'];?>" method="post">
                                             <?php
                                             $result = mysqli_query($link,"SELECT * FROM users WHERE USER_FIRSTNAME='" . $_GET['USER_FIRSTNAME'] . "'");
                                             $row= mysqli_fetch_array($result);
@@ -42,8 +42,12 @@
                                                     <input id="username" type="text" name="username-edit" autocomplete="off" class="form-control" value="<?php echo $row['USERNAME']; ?>" required>
                                                 </div>
                                                 <div class="form-group col-md-4">
-                                                    <label for="username">Gebruikersrol</label>
-                                                    <input id="username" type="number" name="userrole-edit" min="1" max="3" minlength="1" maxlength="1" autocomplete="off" class="form-control" value="<?php echo $row['USER_ROLE']; ?>" required>
+                                                    <label for="userrole">Gebruikersrol</label>
+                                                    <select id="userrole" class="form-control" name="userrole-edit">
+                                                        <option class="nav-item" value="admin">Administrator</option>
+                                                        <option class="nav-item" value="subadmin">Beheerder</option>
+                                                        <option class="nav-item" value="visitor">Bezoeker</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">

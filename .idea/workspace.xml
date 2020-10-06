@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/_layouts/_layout-footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/_layout-nopage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/_layout-userlayout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_artists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-regular-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-regular-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/fonts/fontawesome-all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/ds-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/ds-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/elo-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/elo-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/fs-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/fs-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/gm-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/gm-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/normaal-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/normaal-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/pf-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/pf-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/prince-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/prince-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/queen-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/queen-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bands/supertramp-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/bands/supertramp-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/music-cafe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/music-cafe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/music-wall.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/music-wall.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/old-cd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/old-cd.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/record-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/record-close.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/record-holding.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/record-holding.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/record-laptop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/record-laptop.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/record-top.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/record-top.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/recordplayer-close-arm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/recordplayer-close-arm.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/recordplayer-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/recordplayer-close.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/recordplayer-really-close-arm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/recordplayer-really-close-arm.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/recordplayer-really-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/recordplayer-really-close.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/vinyl-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/vinyl-close.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/vinyl-lamp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/vinyl-lamp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/vinyl-really-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/vinyl-really-close.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/custom/vinyl-sideways.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/custom/vinyl-sideways.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/functional/download.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/functional/download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/functional/enable-sound.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/functional/enable-sound.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/functional/song.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/functional/song.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/platen/elo-ootb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/platen/elo-ootb.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/platen/pink-floyd-wywh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/platen/pink-floyd-wywh.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/bs-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/bs-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/chart.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database_connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/database_connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete-posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete-song.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete-song.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit-own-profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit-own-profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit-posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit-profiles-handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit-profiles-handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit-profiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit-profiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/huidige-profielen.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/huidige-profielen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inject-blogpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inject-blogpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inject-songofday.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inject-songofday.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/newsletter-users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no-permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/no-permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/own-profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-edit-handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/post-edit-handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register-handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register-handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songofday.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toegevoegd.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/toegevoegd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toevoegen.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/toevoegen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update-maker.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-maker.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iSypZ6BSsLKArgc7fF18mBYYh5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="" />
+      <created>1601915470851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601915470851</updated>
+      <workItem from="1601915471906" duration="4859000" />
+      <workItem from="1601983853896" duration="7768000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601915469558">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1601915469558" />
+  </component>
+</project>

@@ -51,7 +51,7 @@ exit;
 <div id="wrapper">
 <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
         <div class="container-fluid d-flex flex-column p-0">
-            <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="index.php">
                 <div class="sidebar-brand-icon"><i class="fas fa-user-astronaut"></i></div>
                 <div class="sidebar-brand-text mx-3"><span>Het Platenhuis</span></div>
             </a>
@@ -76,9 +76,11 @@ exit;
                                 class="fas fa-user-edit"></i><span>Toevoegen</span></a></li>
 
 
-                <li class="nav-item" role="presentation"><a class="nav-link <?= ($activePage == 'newsletter-users') ? 'active':''; ?>" href="./newsletter-users.php"><i
-                                class="fas fa-newspaper"></i><span>Nieuwsbrief</span></a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link disabled <?= ($activePage == 'newsletter-users') ? 'active':''; ?>" href="./newsletter-users.php"><i
+                                class="fas fa-newspaper"></i><span>Gebruikers</span></a></li>
 
+                <li class="nav-item" role="presentation"><a class="nav-link disabled" href="#"><i
+                                class="fas fa-tags"></i><span>Webshop</span></a></li>
 
 
                 <li class="nav-item" role="presentation"><a class="nav-link" href="./logout.php"><i
@@ -92,5 +94,4 @@ exit;
             </div>
         </div>
     </nav>
-    <?php
-include '_layout-userlayout.phtml';
+<?php include '_layout-userlayout.phtml';

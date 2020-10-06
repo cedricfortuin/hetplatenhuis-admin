@@ -1,4 +1,11 @@
-<?php include 'config/config.php'; ?>
+<?php include_once 'config/config.php'; $new_sql = mysqli_query($link, "SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
+$username = mysqli_fetch_array($new_sql);
+
+// Check if the user is logged in, if not then redirect him to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+}?>
 
     <!DOCTYPE html>
     <html lang="nl">
@@ -65,9 +72,11 @@
 
 
                 <li class="nav-item" role="presentation"><a class="nav-link" href="./newsletter-users.php"><i
-                            class="fas fa-newspaper"></i><span>Nieuwsbrief</span></a></li>
+                            class="fas fa-newspaper"></i><span>Gebruikers</span></a></li>
 
-
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link disabled" href="#"><i
+                                class="fas fa-tags"></i><span>Webshop</span></a></li>
 
                 <li class="nav-item" role="presentation"><a class="nav-link" href="./logout.php"><i
                             class="far fa-user-circle"></i><span>Logout</span></a></li>
