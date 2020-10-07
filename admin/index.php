@@ -34,6 +34,7 @@ include '_layouts/_layout-header.phtml';
                 <div class="container">
                     <p class="alert alert-primary">De adminomgeving is vernieuwd! Kijk gauw rond!</p>
                     <div class="row">
+
                         <div class="col-md-8">
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                 <h3 class="text-dark mb-0">Dashboard</h3>

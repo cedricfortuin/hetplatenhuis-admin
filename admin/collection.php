@@ -126,13 +126,13 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
                                 <?php if ($page > 1): ?>
                                     <li class="prev">
                                         <a class="btn btn-outline-primary harry"
-                                           href="songofday.php?page=<?php echo $page - 1 ?>">Vorige</a>
+                                           href="collection.php?page=<?php echo $page - 1 ?>">Vorige</a>
                                     </li>
                                 <?php endif; ?>
                                 <?php if ($page < ceil($total_pages / $num_results_on_page)): ?>
                                     <li class="next">
                                         <a class="btn btn-outline-primary harry"
-                                           href="songofday.php?page=<?php echo $page + 1 ?>">Volgende</a>
+                                           href="collection.php?page=<?php echo $page + 1 ?>">Volgende</a>
                                     </li>
                                 <?php endif; ?>
                             </ul>
