@@ -1,4 +1,5 @@
 <?php
+include 'config/config.php';
 $sql = "DELETE FROM collection WHERE RECORD_ID='" . $_GET["RECORD_ID"] . "'";
 
 if (mysqli_query($link, $sql)) {
