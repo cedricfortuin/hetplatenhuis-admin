@@ -102,10 +102,9 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
                                         if ($username['USER_ROLE'] !== 'visitor')
                                         { ?>
                                             <td><a
-                                                    href="delete-song.php?SONG_ID=<?php echo $row["SONG_ID"] ?>">Verwijderen</a>
+                                                    href="delete_record.php?RECORD_ID=<?php echo $row["RECORD_ID"] ?>">Verwijderen</a>
                                             </td>
                                         <?php }
-
                                         ?>
                                     </tr>
                                 <?php endwhile; ?>
@@ -170,7 +169,7 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
                                               id="inputOwner" autocomplete="off" <?php echo $disabled ?>>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-outline-primary" <?php echo $disabled ?>>Updaten</button>
+                            <button type="submit" class="btn btn-outline-primary" <?php echo $disabled ?>>Toevoegen</button>
                             <br><br>
                         </form>
                     </div>
