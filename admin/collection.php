@@ -178,6 +178,7 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
 
         </section>
     </div>
+    </div>
     <?php
     $stmt->close();
 }
