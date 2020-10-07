@@ -68,12 +68,12 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
             <div class="container">
                 <?php
                 if ($UPDATE_SUCCESS) { ?>
-                    <p class="alert alert-success alert-dismissible">De plaat is succesvol toegevoegd!
+                    <p class="alert alert-success alert-dismissible fade show">De plaat is succesvol toegevoegd!
                         <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
                     </p>
                 <?php }
                 if ($DELETE_SUCCESS) { ?>
-                    <p class="alert alert-success alert-dismissible">De plaat is succesvol verwijderd!
+                    <p class="alert alert-success alert-dismissible fade show">De plaat is succesvol verwijderd!
                         <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
                     </p>
                 <?php }
