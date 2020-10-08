@@ -10,7 +10,7 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 
 // Debug
-$mail->SMTPDebug = 3;
+$mail->SMTPDebug = 0;
 $mail->Debugoutput = 'json';
 
 // Settings
