@@ -1,6 +1,6 @@
 <?php include '_layouts/_layout-nopage.phtml';
 include_once 'config/config.php';
-$result = mysqli_query($link, "SELECT * FROM users WHERE USER_ID='" . $_SESSION['id'] . "'");
+$result = mysqli_query($ConnectionLink, "SELECT * FROM users WHERE USER_ID='" . $_SESSION['id'] . "'");
 $row = mysqli_fetch_array($result);
 ?>
     <div class="container-fluid">

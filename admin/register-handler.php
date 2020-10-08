@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare a select statement
         $sql = "SELECT USER_ID FROM users WHERE USERNAME = ?";
 
-        if ($stmt = mysqli_prepare($link, $sql)) {
+        if ($stmt = mysqli_prepare($ConnectionLink, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $username = trim($_POST["username"]);
                 }
             } else {
-                echo "Oops! Something went wrong. Please try again later. " . mysqli_error($link);
+                echo "Oops! Something went wrong. Please try again later. " . mysqli_error($ConnectionLink);
             }
 
             // Close statement
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare an insert statement
         $sql = "INSERT INTO users (USERNAME, USER_PASSWORD, USER_ROLE, USER_FIRSTNAME, USER_LASTNAME, USER_EMAIL) VALUES (?, ?, ?, ?, ?, ?)";
 
-        if ($stmt = mysqli_prepare($link, $sql)) {
+        if ($stmt = mysqli_prepare($ConnectionLink, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ssssss", $param_username, $param_password, $param_user_role, $param_firstname, $param_lastname, $param_email);
 
@@ -121,9 +121,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Redirect to login page
-                header("location: huidige-profielen.php?ADD_SUCCESS=true");
+                echo "<script>window.location.href='current_admins_page.php?SHOW_ALERT=ON_SUBMIT'</script>";
             } else {
-                echo "Something went wrong. Please try again later. " . mysqli_error($link);
+                echo "<script>window.location.href='current_admins_page.php?SHOW_ALERT=ON_ERROR'</script>";
             }
 
             // Close statement
@@ -132,5 +132,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Close connection
-    mysqli_close($link);
+    mysqli_close($ConnectionLink);
 }

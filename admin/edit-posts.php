@@ -13,37 +13,36 @@
                         <div class="col-md-12 mx-auto">
                             <div class="login-form">
                                 <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                                    <h3 class="text-dark mb-0">Post aanpassen</h3>
+                                    <h3 class="text-dark mb-0">Update aanpassen</h3>
                                 </div>
-                                <form action="post-edit-handler.php?POST_ID=<?php echo $_GET["POST_ID"]; ?>" method="post">
+                                <form action="" method="post">
                                     <?php
-                                    $result = mysqli_query($link, "SELECT * FROM posts WHERE POST_ID='" . $_GET['POST_ID'] . "'");
-                                    $row = mysqli_fetch_array($result);
+                                    $getUpdateFromSelected = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM updates WHERE UPDATE_ID='" . $_GET['UPDATE_ID'] . "'"));
                                     ?>
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label for="firstname">Titel</label>
                                             <input id="firstname" type="text" name="title-edit" autocomplete="off"
                                                    class="form-control"
-                                                   value="<?php echo $row['POST_TITLE']; ?>" required>
+                                                   value="<?php echo $getUpdateFromSelected['UPDATE_TITLE']; ?>" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="lastname">Auteur</label>
                                             <input id="lastname" type="text" name="author-edit" autocomplete="off"
                                                    class="form-control"
-                                                   value="<?php echo $row['POST_TEXT']; ?>" required>
+                                                   value="<?php echo $getUpdateFromSelected['UPDATE_AUTHOR']; ?>" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-8">
-                                            <label for="username">Text</label>
+                                            <label for="username">Tekst</label>
                                             <textarea id="username" style="height: auto;" type="text" name="text-edit"
                                                       autocomplete="off" class="form-control"
-                                                      required><?php echo $row['POST_AUTHOR']; ?></textarea>
+                                                      required><?php echo $getUpdateFromSelected['UPDATE_TEXT']; ?></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" class="btn btn-primary" value='Post bewerken'>
+                                        <input type="submit" class="btn btn-primary" value='Update bewerken' name="editUpdate">
                                     </div>
                                 </form>
                             </div>
@@ -54,4 +53,26 @@
         </section>
     </div>
     </div>
-<?php include '_layouts/_layout-footer.phtml' ?>
+<?php include '_layouts/_layout-footer.phtml';
+
+if (isset($_POST['editUpdate']))
+{
+    // Escape user inputs for security
+    $title = mysqli_real_escape_string($ConnectionLink, $_POST['title-edit']);
+    $author = mysqli_real_escape_string($ConnectionLink, $_POST['author-edit']);
+    $text = mysqli_real_escape_string($ConnectionLink, $_POST['text-edit']);
+
+    // Attempt insert query execution
+    $sql = "UPDATE updates SET UPDATE_TITLE =  '".$title."' , UPDATE_AUTHOR = '".$author."', UPDATE_TEXT = '".$text."'  WHERE UPDATE_ID = '". $_GET['UPDATE_ID'] ."'";
+    if (mysqli_query($ConnectionLink, $sql)) {
+        echo "<script>window.location.href='update_page.php?SHOW_ALERT=ON_EDIT'</script>";
+    } else {
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($ConnectionLink);
+    }
+
+    // Close connection
+    mysqli_close($ConnectionLink);
+}
+
+
+?>

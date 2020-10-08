@@ -11,21 +11,23 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 include 'config/config.php';
-$new_sql = mysqli_query($link, "SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
+$new_sql = mysqli_query($ConnectionLink, "SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
 $username = mysqli_fetch_array($new_sql);
 
-$disabled = '';
+
 
 if($username['USER_ROLE'] === 'visitor' || 'subadmin')
 {
     $disabled = 'disabled';
+} else {
+    $disabled = '';
 }
 
 include '_layouts/_layout-header.phtml';
 ?>
             <section class="content-section">
                 <?php
-                $result = mysqli_query($link, "SELECT * FROM newsletter ORDER BY USER_ID ASC")
+                $result = mysqli_query($ConnectionLink, "SELECT * FROM newsletter ORDER BY USER_ID ASC")
                 ?>
                 <div class="container">
                     <div class="row">
@@ -89,7 +91,7 @@ include '_layouts/_layout-header.phtml';
                                             <select class="form-control" name="admin-name"
                                                     id="inputArtist" autocomplete="off" <?php echo $disabled ?>>
                                                 <?php
-                                                $admin = mysqli_query($link, "SELECT USER_FIRSTNAME FROM users ORDER BY USER_ID ASC");
+                                                $admin = mysqli_query($ConnectionLink, "SELECT USER_FIRSTNAME FROM users ORDER BY USER_ID ASC");
                                                 $i = 0;
                                                 while ($admin_item = mysqli_fetch_array($admin)) {
                                                 ?>

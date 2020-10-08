@@ -1,32 +1,12 @@
-<?php
-include '_layouts/_layout-nopage.phtml';
-?>
-            <div class="container-fluid">
-                <section class="content-section" style="color: black;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <section class="content-section" style="color: black;">
-                                    <?php
-                                    $sql = "DELETE FROM users WHERE USER_ID='" . $_GET["USER_ID"] . "'";
+<?php include 'config/config.php';
+$sql = "DELETE FROM users WHERE USER_ID='" . $_GET["USER_ID"] . "'";
 
-                                    if (mysqli_query($link, $sql)) {
-                                        echo "<script>window.location.href='huidige-profielen.php?DELETE_SUCCESS=true'</script>";
-                                    } else {
-                                        echo "<div class='col-md-10 mx-auto alert alert-danger text-center'>" . mysqli_error($link) . " <br><h4>Neem contact op met de Administrator</h4></div>";
-                                    }
+    if (mysqli_query($ConnectionLink, $sql)) {
+        echo "<script>window.location.href='current_admins_page.php?SHOW_ALERT=ON_DELETE'</script>";
+    } else {
+        echo "<script>window.location.href='current_admins_page.php?SHOW_ALERT=ON_ERROR'</script>";
+    }
 
-                                    mysqli_close($link);
+$ConnectionLink->close();
 
-                                    ?>
-                                </section>
-
-                            </div>
-                        </div>
-                    </div>
-            </div>
-
-        </div>
-<?php
-include '_layouts/_layout-footer.phtml';
 ?>

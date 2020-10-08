@@ -7,7 +7,7 @@
 
 session_start();
 include 'config/config.php';
-$new_sql = mysqli_query($link,  "SELECT * FROM users WHERE USER_ID ='". $_SESSION['id'] ."'");
+$new_sql = mysqli_query($ConnectionLink,  "SELECT * FROM users WHERE USER_ID ='". $_SESSION['id'] ."'");
 $username = mysqli_fetch_array($new_sql);
 
 // Check if the user is logged in, if not then redirect him to login page
@@ -48,14 +48,14 @@ if($username['USER_ROLE'] === 'visitor')
 }
 
 // Get the total number of records from our table "students".
-$total_pages = $link->query('SELECT * FROM collection')->num_rows;
+$total_pages = $ConnectionLink->query('SELECT * FROM collection')->num_rows;
 $num_results_on_page = 4;
 // Check if the page number is specified and check if it's a number, if not return the default page number which is 1.
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
 include '_layouts/_layout-header.phtml';
 
-if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIMIT ?,?')) {
+if ($stmt = $ConnectionLink->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIMIT ?,?')) {
     // Calculate the page to get the results we need from our table.
     $calc_page = ($page - 1) * $num_results_on_page;
     $stmt->bind_param('ii', $calc_page, $num_results_on_page);
@@ -82,7 +82,7 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
                     <div class="col-md-12">
                         <div class="form-row col-6 text-center">
                             <div class="form-group justify-content-end">
-                                <?php echo 'Aantal platen in collectie: ' .  $link->query('SELECT * FROM collection')->num_rows . " platen."?>
+                                <?php echo 'Aantal platen in collectie: ' .  $ConnectionLink->query('SELECT * FROM collection')->num_rows . " platen."?>
                             </div>
                         </div>
                         <div class="table-responsive">

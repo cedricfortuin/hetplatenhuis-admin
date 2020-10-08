@@ -3,25 +3,25 @@
         <section class="content-section" style="color: black;">
             <?php
             // Check connection
-            if ($link === false) {
+            if ($ConnectionLink === false) {
                 die("ERROR: Could not connect. " . mysqli_connect_error());
             }
 
             // Escape user inputs for security
-            $record_name = mysqli_real_escape_string($link, $_REQUEST['record_name']);
-            $record_artist = mysqli_real_escape_string($link, $_REQUEST['record_artist']);
-            $record_owner = mysqli_real_escape_string($link, $_REQUEST['record_owner']);
+            $record_name = mysqli_real_escape_string($ConnectionLink, $_REQUEST['record_name']);
+            $record_artist = mysqli_real_escape_string($ConnectionLink, $_REQUEST['record_artist']);
+            $record_owner = mysqli_real_escape_string($ConnectionLink, $_REQUEST['record_owner']);
 
             // Attempt insert query execution
             $sql = "INSERT INTO collection (RECORD_NAME, RECORD_ARTIST, RECORD_OWNER) VALUES ('$record_name', '$record_artist', '$record_owner')";
-            if (mysqli_query($link, $sql)) {
+            if (mysqli_query($ConnectionLink, $sql)) {
                 echo "<script>window.location.href='collection.php?UPDATE_SUCCESS=true'</script>";
             } else {
-                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($ConnectionLink);
             }
 
             // Close connection
-            mysqli_close($link);
+            mysqli_close($ConnectionLink);
             ?>
         </section>
     </div>
