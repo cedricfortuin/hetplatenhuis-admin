@@ -186,7 +186,7 @@ include './_layouts/_layout-footer.phtml';
         if (mysqli_query($ConnectionLink, $sql)) {
             echo "<script>window.location.href='songofday_page.php?SHOW_ALERT=ON_SUBMIT'</script>";
         } else {
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($ConnectionLink);
+            echo "<script>window.location.href='songofday_page.php?SHOW_ALERT=ON_ERROR'</script>";
         }
 
         // Close connection.

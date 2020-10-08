@@ -71,7 +71,7 @@ if (isset($_POST['editUpdate']))
     }
 
     // Close connection
-    mysqli_close($ConnectionLink);
+    $ConnectionLink->close();
 }
 
 

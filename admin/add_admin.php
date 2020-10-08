@@ -35,7 +35,7 @@ include '_layouts/_layout-header.phtml';
                             <div>
                                 <p>Maak hier een nieuwe gebruiker aan</p>
                             </div>
-                            <form action="register-handler.php" method="post">
+                            <form action="register_handler.php" method="post">
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="firstname">Voornaam</label>

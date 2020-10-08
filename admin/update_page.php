@@ -118,10 +118,10 @@ include '_layouts/_layout-header.phtml';
                                         if (!$isDisabledForVisitors)
                                         { ?>
                                             <td><a
-                                                        href="edit-posts.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>">Bewerken</a>
+                                                        href="edit_update_page.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>">Bewerken</a>
                                             </td>
                                             <td><a
-                                                        href="delete-posts.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>">Verwijderen</a>
+                                                        href="delete_update_handler.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>">Verwijderen</a>
                                             </td>
                                         <?php } ?>
                                     </tr>

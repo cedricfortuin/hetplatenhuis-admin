@@ -104,9 +104,9 @@ include '_layouts/_layout-header.phtml'; ?>
                                         if(!$isDisabledForVisitorsAndSubadmins)
                                         { ?>
                                             <td><a
-                                                        href="edit-profiles.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Bewerken</a></td>
+                                                        href="edit_admin_page.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Bewerken</a></td>
                                             <td><a
-                                                        href="delete-admin.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Verwijderen</a>
+                                                        href="delete_admin_handler.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Verwijderen</a>
                                             </td>
                                         <?php } ?>
                                     </tr>
