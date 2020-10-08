@@ -23,4 +23,4 @@ $mail->Password = 'H@2Plat3nHu1s';
 
 $mail->SMTPSecure = 'tls';
 
-$mail->Port = 3306;
+$mail->Port = 25;
