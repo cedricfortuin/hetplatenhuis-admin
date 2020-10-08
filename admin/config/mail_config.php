@@ -9,7 +9,7 @@ $mail = new PHPMailer(TRUE);
 $mail->isSMTP();
 
 // Debug
-$mail->SMTPDebug = 3;
+$mail->SMTPDebug = 0;
 $mail->Debugoutput = 'html';
 
 // Settings
