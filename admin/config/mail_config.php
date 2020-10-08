@@ -9,8 +9,8 @@ $mail = new PHPMailer(TRUE);
 $mail->isSMTP();
 
 // Debug
-$mail->SMTPDebug = 0;
-$mail->Debugoutput = 'html';
+$mail->SMTPDebug = 3;
+$mail->Debugoutput = 'json';
 
 // Settings
 $mail->Host = '127.0.0.1';
