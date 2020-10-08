@@ -13,7 +13,7 @@ $mail->SMTPDebug = 3;
 $mail->Debugoutput = 'json';
 
 // Settings
-$mail->Host = '127.0.0.1';
+$mail->Host = 'localhost';
 
 $mail->SMTPAuth = TRUE;
 
@@ -23,4 +23,4 @@ $mail->Password = 'H@2Plat3nHu1s';
 
 $mail->SMTPSecure = 'tls';
 
-$mail->Port = 25;
+$mail->Port = 3306;
