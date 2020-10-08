@@ -7,7 +7,7 @@
 
 session_start();
 include 'config/config.php';
-$new_sql = mysqli_query($link,  "SELECT * FROM users WHERE USER_ID ='". $_SESSION['id'] ."'");
+$new_sql = mysqli_query($ConnectionLink,  "SELECT * FROM users WHERE USER_ID ='". $_SESSION['id'] ."'");
 $username = mysqli_fetch_array($new_sql);
 
 // Check if the user is logged in, if not then redirect him to login page
@@ -48,14 +48,14 @@ if($username['USER_ROLE'] === 'visitor')
 }
 
 // Get the total number of records from our table "students".
-$total_pages = $link->query('SELECT * FROM collection')->num_rows;
+$total_pages = $ConnectionLink->query('SELECT * FROM collection')->num_rows;
 $num_results_on_page = 4;
 // Check if the page number is specified and check if it's a number, if not return the default page number which is 1.
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
 include '_layouts/_layout-header.phtml';
 
-if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIMIT ?,?')) {
+if ($stmt = $ConnectionLink->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIMIT ?,?')) {
     // Calculate the page to get the results we need from our table.
     $calc_page = ($page - 1) * $num_results_on_page;
     $stmt->bind_param('ii', $calc_page, $num_results_on_page);
@@ -67,22 +67,37 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
         <section class="content-section">
             <div class="container">
                 <?php
-                if ($UPDATE_SUCCESS) { ?>
-                    <p class="alert alert-success alert-dismissible fade show">De plaat is succesvol toegevoegd!
-                        <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
-                    </p>
-                <?php }
-                if ($DELETE_SUCCESS) { ?>
-                    <p class="alert alert-success alert-dismissible fade show">De plaat is succesvol verwijderd!
-                        <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
-                    </p>
-                <?php }
+                if(isset($_GET['SHOW_ALERT']))
+                {
+                    $showAlert = $_GET['SHOW_ALERT'];
+                    switch ($showAlert)
+                    {
+                        case 'ON_SUBMIT': ?>
+                            <p class="alert alert-success alert-dismissible fade show">De plaat is succesvol toegevoegd!
+                                <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
+                            </p>
+                            <?php
+                            break;
+                        case 'ON_DELETE': ?>
+                            <p class="alert alert-success alert-dismissible fade show">De plaat is succesvol verwijderd!
+                                <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
+                            </p>
+                            <?php
+                            break;
+                        case 'ON_ERROR': ?>
+                            <p class="alert alert-danger alert-dismissible fade show">Er is iets fout gegaan, probeer het later opnieuw.
+                                <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
+                            </p>
+                            <?php
+                            break;
+                    }
+                }
                 ?>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-row col-6 text-center">
                             <div class="form-group justify-content-end">
-                                <?php echo 'Aantal platen in collectie: ' .  $link->query('SELECT * FROM collection')->num_rows . " platen."?>
+                                <?php echo 'Aantal platen in collectie: ' .  $ConnectionLink->query('SELECT * FROM collection')->num_rows . " platen."?>
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -151,7 +166,7 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
                         <p>Voeg hier een nieuwe plaat toe aan de collectie.</p>
                     </div>
                     <div class="form">
-                        <form action="add_to_collection.php" method="post">
+                        <form action="" method="post">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputName">Naam van de plaat</label>
@@ -169,7 +184,7 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
                                               id="inputOwner" autocomplete="off" <?php echo $disabled ?>>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-outline-primary" <?php echo $disabled ?>>Toevoegen</button>
+                            <button type="submit" class="btn btn-outline-primary" <?php echo $disabled ?> name="addRecord">Toevoegen</button>
                             <br><br>
                         </form>
                     </div>
@@ -183,4 +198,26 @@ if ($stmt = $link->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIM
     $stmt->close();
 }
 
-include './_layouts/_layout-footer.phtml' ?>
+include './_layouts/_layout-footer.phtml';
+
+
+    if (isset($_REQUEST['addRecord']))
+    {
+        // Escape the values for security.
+        $record_name = mysqli_real_escape_string($ConnectionLink, $_REQUEST['record_name']);
+        $record_artist = mysqli_real_escape_string($ConnectionLink, $_REQUEST['record_artist']);
+        $record_owner = mysqli_real_escape_string($ConnectionLink, $_REQUEST['record_owner']);
+
+        // Insert the data into the database.
+        $sql = "INSERT INTO collection (RECORD_NAME, RECORD_ARTIST, RECORD_OWNER) VALUES ('$record_name', '$record_artist', '$record_owner')";
+        if (mysqli_query($ConnectionLink, $sql)) {
+            echo "<script>window.location.href='collection.php?SHOW_ALERT=ON_SUBMIT'</script>";
+        } else {
+            echo "<script>window.location.href='collection.php?SHOW_ALERT=ON_ERROR'</script>";
+        }
+
+        // Close connection.
+        $ConnectionLink->close();
+    }
+
+?>

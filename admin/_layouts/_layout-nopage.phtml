@@ -1,7 +1,6 @@
 <?php include_once 'config/config.php';
 session_start();
-$new_sql = mysqli_query($link, "SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
-$username = mysqli_fetch_array($new_sql);
+$getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'"));
 
 // Check if the user is logged in, if not then redirect him to login page
 ?>
@@ -13,7 +12,7 @@ $username = mysqli_fetch_array($new_sql);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="shortcut icon" href="./assets/img/functional/song.png" type="image/x-icon"/>
-        <title>Het Platenhuis - Admin - Insert</title>
+        <title>Het Platenhuis - Admin - <?php echo $getValue['USER_FIRSTNAME']; ?></title>
         <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -57,21 +56,21 @@ $username = mysqli_fetch_array($new_sql);
                 <li class="nav-item" role="presentation"><a class="nav-link" href="./index.php"><i
                             class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./songofday.php">
+                <li class="nav-item" role="presentation"><a class="nav-link" href="./songofday_page.php">
                         <i class="fab fa-spotify"></i><span>Nummer van de Dag</span></a></li>
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./update-maker.php"><i
+                <li class="nav-item" role="presentation"><a class="nav-link" href="./update_page.php"><i
                             class="far fa-edit"></i><span>Updates</span></a></li>
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./huidige-profielen.php"><i
+                <li class="nav-item" role="presentation"><a class="nav-link" href="./current_admins_page.php"><i
                             class="fas fa-user"></i><span>Profielen</span></a></li>
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./toevoegen.php"><i
+                <li class="nav-item" role="presentation"><a class="nav-link" href="./add_admin.php"><i
                             class="fas fa-user-edit"></i><span>Toevoegen</span></a></li>
 
 
                 <li class="nav-item" role="presentation"><a class="nav-link disabled" href="./newsletter-users.php"><i
-                            class="fas fa-newspaper"></i><span>Gebruikers</span></a></li>
+                            class="fas fa-users"></i><span>Gebruikers</span></a></li>
 
                 <li class="nav-item" role="presentation"><a class="nav-link disabled" href="#"><i
                                 class="fas fa-tags"></i><span>Webshop</span></a></li>

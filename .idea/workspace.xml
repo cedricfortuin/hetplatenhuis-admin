@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/new_features.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/new_features.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +11,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,10 +31,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -47,6 +57,12 @@
       <updated>1601915470851</updated>
       <workItem from="1601915471906" duration="4859000" />
       <workItem from="1601983853896" duration="7768000" />
+      <workItem from="1602012371444" duration="1032000" />
+      <workItem from="1602053609765" duration="2114000" />
+      <workItem from="1602055762264" duration="82000" />
+      <workItem from="1602063250128" duration="1713000" />
+      <workItem from="1602068434813" duration="4239000" />
+      <workItem from="1602080875851" duration="24594000" />
     </task>
     <servers />
   </component>
@@ -56,14 +72,54 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602101605156">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602101605156" />
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602071433877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602071433877" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602144914018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602144914018" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601915469558">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1601915469558" />
+    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1602072304442">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602072304442" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602103868582">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602085982096" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602103868582" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602011199864">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602011199864" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602137830065">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1602137830065" />
+    <state x="171" y="-14" width="1182" height="811" maximized="true" key="dock-window-1" timestamp="1602084318409">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="171" y="-14" width="1182" height="811" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602084318409" />
+    <state x="479" y="100" width="578" height="624" key="find.popup" timestamp="1602142566581">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602142566581" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1602103046515">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602103046515" />
   </component>
 </project>
