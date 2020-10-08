@@ -25,7 +25,7 @@ include '_layouts/_layout-header.phtml';
                 switch ($_GET['SHOW_ALERT'])
                 {
                     case 'ON_SENT': ?>
-                        <p class="alert alert-success alert-dismissible fade show">De update is succesvol toegevoegd!
+                        <p class="alert alert-success alert-dismissible fade show">De mail is verzonden!
                             <button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button>
                         </p>
                         <?php
@@ -92,10 +92,9 @@ if (isset($_POST['sendNewMail']))
     //$mail->AltBody = $mail_text;
 
     if(!$mail->send()){
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        echo "<script>window.location.href='add_new_mail.php?SHOW_ALERT=ON_ERROR'</script>";
     }else {
-        echo 'Message has been sent';
+        echo "<script>window.location.href='add_new_mail.php?SHOW_ALERT=ON_SUBMIT'</script>";
     }
 
 }
