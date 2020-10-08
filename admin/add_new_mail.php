@@ -81,7 +81,7 @@ if (isset($_POST['sendNewMail']))
     $mail_subject = mysqli_real_escape_string($ConnectionLink, $_POST['mail_subject']);
     $mail_text = mysqli_real_escape_string($ConnectionLink, $_POST['mail_text']);
 
-    $mail->setFrom('postmaster@localhost', 'Het Platenhuis');
+    $mail->setFrom('info@hetplatenhuis.nl', 'Het Platenhuis');
     $mail->addAddress($mail_receiver);
 
     $mail->isHTML(false);

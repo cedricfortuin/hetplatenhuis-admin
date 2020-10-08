@@ -17,7 +17,7 @@ $mail->Host = '127.0.0.1';
 
 $mail->SMTPAuth = TRUE;
 
-$mail->Username = 'info@hetplatenhuis.nl';
+$mail->Username = 'postmaster@localhost';
 
 $mail->Password = 'H@2Plat3nHu1s';
 
