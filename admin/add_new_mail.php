@@ -94,7 +94,7 @@ if (isset($_POST['sendNewMail']))
     if(!$mail->send()){
         echo "<script>window.location.href='add_new_mail.php?SHOW_ALERT=ON_ERROR'</script>";
     }else {
-        echo "<script>window.location.href='add_new_mail.php?SHOW_ALERT=ON_SUBMIT'</script>";
+        echo "<script>window.location.href='add_new_mail.php?SHOW_ALERT=ON_SENT'</script>";
     }
 
 }
