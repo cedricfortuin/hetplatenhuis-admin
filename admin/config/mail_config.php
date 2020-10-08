@@ -7,9 +7,9 @@ $mail = new PHPMailer();
 
 // Mail configuration
 $mail->isSMTP();
-$mail->Host = '127.0.0.1';
+$mail->Host = 'smtp.strato.de';
 $mail->SMTPAuth = true;
-$mail->Username = 'postmaster@localhost';
-$mail->Password = 'Mail@HetPlatenhuis';
+$mail->Username = 'info@hetplatenhuis.nl';
+$mail->Password = 'H@2Plat3nHu1s';
 $mail->SMTPSecure = 'tls';
-$mail->Port = 25;
+$mail->Port = 465;
