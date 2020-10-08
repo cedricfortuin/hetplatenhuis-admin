@@ -3,10 +3,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
 
-$mail = new PHPMailer;
+$mail = new PHPMailer(TRUE);
 
 // Mail configuration
-$mail->isSendmail();
+$mail->isSMTP();
 
 // Debug
 $mail->SMTPDebug = 3;
@@ -14,8 +14,13 @@ $mail->Debugoutput = 'html';
 
 // Settings
 $mail->Host = '127.0.0.1';
-$mail->SMTPAuth = true;
-$mail->Username = 'postmaster@localhost';
+
+$mail->SMTPAuth = TRUE;
+
+$mail->Username = 'info@hetplatenhuis.nl';
+
 $mail->Password = 'H@2Plat3nHu1s';
+
 $mail->SMTPSecure = 'tls';
+
 $mail->Port = 25;
