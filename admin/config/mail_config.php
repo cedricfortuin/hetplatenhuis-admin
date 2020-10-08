@@ -17,10 +17,10 @@ $mail->Host = '127.0.0.1';
 
 $mail->SMTPAuth = TRUE;
 
-$mail->Username = 'postmaster@localhost';
+$mail->Username = 'info@hetplatenhuis.nl';
 
 $mail->Password = 'H@2Plat3nHu1s';
 
 $mail->SMTPSecure = 'tls';
 
-$mail->Port = 25;
+$mail->Port = 3306;
