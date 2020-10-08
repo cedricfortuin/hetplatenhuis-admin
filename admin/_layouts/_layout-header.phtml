@@ -6,7 +6,8 @@ $getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 header("location: login.php");
 exit;
-} ?>
+}
+?>
 
 <!DOCTYPE html>
 <html lang="nl">
@@ -74,9 +75,11 @@ exit;
                 <li class="nav-item" role="presentation"><a class="nav-link <?= ($activePage == 'add_admin') ? 'active':''; ?>" href="./add_admin.php"><i
                                 class="fas fa-user-edit"></i><span>Toevoegen</span></a></li>
 
+                <li class="nav-item" role="presentation"><a class="nav-link disabled <?= ($activePage == 'inbox_page') ? 'active':''; ?>" href="./inbox_page.php"><i
+                                class="fas fa-mail-bulk"></i><span>Inbox</span></a></li>
 
                 <li class="nav-item" role="presentation"><a class="nav-link <?= ($activePage == 'add_new_mail') ? 'active':''; ?>" href="./add_new_mail.php"><i
-                                class="fas fa-mail-bulk"></i><span>Mail versturen</span></a></li>
+                                class="fas fa-paper-plane"></i><span>Mail versturen</span></a></li>
 
                 <li class="nav-item" role="presentation"><a class="nav-link disabled" href="#"><i
                                 class="fas fa-tags"></i><span>Webshop</span></a></li>
