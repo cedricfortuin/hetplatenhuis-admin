@@ -13,7 +13,7 @@ $mail->SMTPDebug = 3;
 $mail->Debugoutput = 'json';
 
 // Settings
-$mail->Host = '127.0.0.1';
+$mail->Host = 'hetplatenhuis.nl';
 
 $mail->SMTPAuth = true;
 
