@@ -2,7 +2,6 @@
 session_start();
 $getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'"));
 
-// Check if the user is logged in, if not then redirect him to login page
 ?>
 
     <!DOCTYPE html>
@@ -69,8 +68,12 @@ $getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE
                             class="fas fa-user-edit"></i><span>Toevoegen</span></a></li>
 
 
+                <li class="nav-item" role="presentation"><a class="nav-link disabled" href="./inbox_page.php"><i
+                                class="fas fa-mail-bulk"></i><span>Inbox</span></a></li>
+
                 <li class="nav-item" role="presentation"><a class="nav-link" href="./add_new_mail.php"><i
-                            class="fas fa-mail-bulk"></i><span>Mail versturen</span></a></li>
+                            class="fas fa-paper-plane"></i><span>Mail versturen</span></a></li>
+
 
                 <li class="nav-item" role="presentation"><a class="nav-link disabled" href="#"><i
                                 class="fas fa-tags"></i><span>Webshop</span></a></li>
