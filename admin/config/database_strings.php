@@ -14,3 +14,8 @@ define ('LOCAL_HOST', 'localhost');
 define('LOCAL_USER', 'root');
 define('LOCAL_PASSWORD', 'root');
 define('LOCAL_DATABASE', 'hetplatenhuis');
+
+//These strings are for the SMTP configuration
+define('SMTP_HOST', 'hetplatenhuis.nl');
+define('SMTP_USERNAME', 'info@hetplatenhuis.nl');
+define('SMTP_PASSWORD', 'H@2Plat3nHu1s');

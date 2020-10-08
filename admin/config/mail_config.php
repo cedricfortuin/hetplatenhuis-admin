@@ -2,6 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
+include "database_strings.php";
 
 $mail = new PHPMailer(true);
 
@@ -13,13 +14,13 @@ $mail->SMTPDebug = 3;
 $mail->Debugoutput = 'json';
 
 // Settings
-$mail->Host = 'hetplatenhuis.nl';
+$mail->Host = SMTP_HOST;
 
 $mail->SMTPAuth = true;
 
-$mail->Username = 'info@hetplatenhuis.nl';
+$mail->Username = SMTP_USERNAME;
 
-$mail->Password = 'H@2Plat3nHu1s';
+$mail->Password = SMTP_PASSWORD;
 
 $mail->SMTPSecure = 'tls';
 
