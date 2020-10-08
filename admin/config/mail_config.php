@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 // Mail configuration
-$mail->isSendmail();
+$mail->isSMTP();
 
 // Debug
 $mail->SMTPDebug = 3;
