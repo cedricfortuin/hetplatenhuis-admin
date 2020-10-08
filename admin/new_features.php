@@ -18,6 +18,7 @@ include '_layouts/_layout-nopage.phtml'; ?>
                             <li><p>Er zijn nu meerdere dingen toegevoegd om de site sneller te laten lopen.</p></li>
                             <li><p>Daarnaast worden de alerts beter weergegeven.</p></li>
                             <li><p>Je kan als admin platen toevoegen aan onze collectie.</p></li>
+                            <li><p>Je kan je eigen profiel weer aanpassen!</p></li>
                         </ul>
                     </div>
                 </div>

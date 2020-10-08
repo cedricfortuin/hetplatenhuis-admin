@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_to_collection.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/collection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/current_admins_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_admins_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete_admin_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete_update_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete-song.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete-song.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete_record.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/delete_record.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit-own-profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_update_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit-profiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_admin_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/new_features.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/newsletter-users.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/no-permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/no-permission_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/own-profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_own_profile_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/post-edit-handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/register-handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/songofday_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/update_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/new_features.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/new_features.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +62,7 @@
       <workItem from="1602055762264" duration="82000" />
       <workItem from="1602063250128" duration="1713000" />
       <workItem from="1602068434813" duration="4239000" />
-      <workItem from="1602080875851" duration="24074000" />
+      <workItem from="1602080875851" duration="24594000" />
     </task>
     <servers />
   </component>
