@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer;
 
 // Mail configuration
-$mail->isSMTP();
+$mail->isSendmail();
 
 // Debug
 $mail->SMTPDebug = 3;
@@ -18,5 +18,4 @@ $mail->SMTPAuth = true;
 $mail->Username = 'postmaster@localhost';
 $mail->Password = 'H@2Plat3nHu1s';
 $mail->SMTPSecure = 'tls';
-$mail->isSendmail();
 $mail->Port = 25;
