@@ -48,12 +48,12 @@ include '_layouts/_layout-header.phtml';
                 <div class="form">
                     <form action="" method="post">
                         <div class="form-row">
-                            <div class="form-group col-md-10">
+                            <div class="form-group col-md-6">
                                 <label for="inputName">Ontvanger</label>
                                 <input type="text" class="form-control" name="mail_receiver" id="inputName"
                                        autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
                             </div>
-                            <div class="form-group col-md-10">
+                            <div class="form-group col-md-6">
                                 <label for="inputCompany">Onderwerp</label>
                                 <input type="text" class="form-control" name="mail_subject" id="inputCompany"
                                        autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
