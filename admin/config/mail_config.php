@@ -3,10 +3,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
 
-$mail = new PHPMailer(TRUE);
+$mail = new PHPMailer(true);
 
 // Mail configuration
-$mail->isSMTP();
+$mail->isMail();
 
 // Debug
 $mail->SMTPDebug = 3;
@@ -21,6 +21,6 @@ $mail->Username = 'postmaster@localhost';
 
 $mail->Password = 'H@2Plat3nHu1s';
 
-//$mail->SMTPSecure = 'tls';
+$mail->SMTPSecure = 'tls';
 
 $mail->Port = 25;
