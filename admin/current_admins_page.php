@@ -81,10 +81,14 @@ include '_layouts/_layout-header.phtml'; ?>
                                     <?php
                                     $i = 0;
                                     while ($setAdmin = mysqli_fetch_array($getAdmin)) {
+                                        $isOnline = false;
+                                        if ($getOnline["ONLINE_USERNAME"] == $setAdmin["USERNAME"]) {
+                                            $isOnline = true;
+                                        }
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
-                                        <td class="text-center"><?php echo ($getOnline["ONLINE_USERNAME"] == $setAdmin["USERNAME"]) ? '<span style="color: green" title="Online">&bull;</span>' : '<span style="color: red" title="Offline">&bull;</span>'; ?></td>
+                                        <td class="text-center"><?php echo ($isOnline) ? '<span style="color: green" title="Online">&bull;</span>' : '<span style="color: red" title="Offline">&bull;</span>'; ?></td>
                                         <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $setAdmin["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $setAdmin["USERNAME"]; ?></td>
