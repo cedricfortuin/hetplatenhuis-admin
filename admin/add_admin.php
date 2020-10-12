@@ -150,9 +150,10 @@ if(isset($_POST['sendMailAndAddAdmin']))
                         </style>
                         <div class='container-fluid'>
                             <div class='row'>
-                                <div class='col-md-6 text-center'>
+                                <div class='col-md-12'>
                                     <h4>Hoi {$firstname},</h4>
                                     <p>Je bent door een beheerder aangemeld bij de adminomgeving van Het Platenhuis. <br/>
+                                        Dit is je gebruikersnaam: {$username}. <br/>
                                         Klik op de volgende link om je wachtwoord in te stellen: </p>
                                 </div>
                             </div>
@@ -162,7 +163,7 @@ if(isset($_POST['sendMailAndAddAdmin']))
                                 </div>
                             </div>
                             <div class='row'>
-                                <div class='col-md-6 text-center'>
+                                <div class='col-md-12'>
                                     <p>Met vriendelijke groet,<br/> Het Platenhuis<br/>
                                     <small><i>Let op, deze mail is persoonlijk. Deel deze dus niet!</i></small></p>
                                 </div>

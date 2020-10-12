@@ -118,7 +118,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                             <td><a
                                                         href="edit_admin_page.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Bewerken</a></td>
                                             <td><a
-                                                        href="delete_admin_handler.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Verwijderen</a>
+                                                        href="delete_admin_handler.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>&USER_EMAIL=<?php echo $setAdmin["USER_EMAIL"]; ?>">Verwijderen</a>
                                             </td>
                                         <?php } ?>
                                     </tr>
