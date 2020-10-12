@@ -66,6 +66,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                         <th scope="col">Voornaam</th>
                                         <th scope="col">Gebruikersnaam</th>
                                         <th scope="col">Rol</th>
+                                        <th scope="col">Wachtwoord</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                         <?php
@@ -82,20 +83,31 @@ include '_layouts/_layout-header.phtml'; ?>
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
-                                        <td><a href="mailto:<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
+                                        <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $setAdmin["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $setAdmin["USERNAME"]; ?></td>
                                         <td class="text-center">
                                             <?php
                                             switch ($setAdmin["USER_ROLE"]) {
                                                 case "admin":
-                                                    echo '<i class="fas fa-user-lock" id="admin"></i>';
+                                                    echo '<i class="fas fa-user-lock" id="admin" title="Administrator"></i>';
                                                     break;
                                                 case "subadmin":
-                                                    echo '<i class="fas fa-user-cog" id="subadmin"></i>';
+                                                    echo '<i class="fas fa-user-cog" id="subadmin" title="Beheerder"></i>';
                                                     break;
                                                 default:
-                                                    echo '<i class="fas fa-eye" id="visitor"></i>';
+                                                    echo '<i class="fas fa-eye" id="visitor" title="Bezoeker"></i>';
+                                            } ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?php
+                                            switch (empty($setAdmin["USER_PASSWORD"])) {
+                                                case true:
+                                                    echo '<i class="fas fa-exclamation-triangle" title="Nog geen wachtwoord ingesteld"></i>';
+                                                    break;
+                                                case false:
+                                                    echo '<i class="fas fa-user-shield" title="Wachtwoord ingesteld"></i>';
+                                                    break;
                                             } ?>
                                         </td>
                                         <td></td>

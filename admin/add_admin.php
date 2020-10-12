@@ -140,15 +140,34 @@ if(isset($_POST['sendMailAndAddAdmin']))
         $mail_receiver_name = $firstname;
         $button_link = "http://localhost/hetplatenhuis-admin/admin/password/reset_mail.php?token={$generatedToken}&email={$email}";
         $bootstrap_link = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+        $font_link = "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap";
+        $font = "{font-family: 'Ubuntu', sans-serif;}";
         $mail_subject = 'Wachtwoord instellen';
-        $mail_text = "<link rel='stylesheet' href=$bootstrap_link>
-                        <b>Hoi {$firstname}</b>, <br/>
-                        Je bent door een beheerder aangemeld bij de adminomgeving van Het Platenhuis. <br/>
-                        Druk op de volgende link om je wachtwoord in te stellen: <br/>
-                        <a class='btn btn-primary' href={$button_link}>Wachtwoord instellen</a><br/>
-                        Met vriendelijke groet, <br/>
-                        Het Platenhuis </br>
-                        <small><i>Let op, deze mail is persoonlijk. Deel deze dus niet!</i></small>";
+        $mail_text = "<link href={$font_link} rel='stylesheet'>
+                        <link href={$bootstrap_link} rel='stylesheet'>
+                        <style>
+                            h4, p, a {$font};
+                        </style>
+                        <div class='container-fluid'>
+                            <div class='row'>
+                                <div class='col-md-6 text-center'>
+                                    <h4>Hoi {$firstname},</h4>
+                                    <p>Je bent door een beheerder aangemeld bij de adminomgeving van Het Platenhuis. <br/>
+                                        Klik op de volgende link om je wachtwoord in te stellen: </p>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-md-12 justify-content-center'>
+                                    <a class='btn btn-sm btn-outline-primary text-center' href={$button_link}>Wachtwoord instellen</a><br/><br/>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-md-6 text-center'>
+                                    <p>Met vriendelijke groet,<br/> Het Platenhuis<br/>
+                                    <small><i>Let op, deze mail is persoonlijk. Deel deze dus niet!</i></small></p>
+                                </div>
+                            </div>
+                        </div>";
 
         $mail->setFrom('info@hetplatenhuis.nl', 'Het Platenhuis');
         $mail->addAddress($mail_receiver_email, $mail_receiver_name);

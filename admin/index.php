@@ -57,37 +57,43 @@ include 'collect_all_datahandlers.php';
                     </div>
                     <br><br>
                     <div class="row">
-                        <div class="col-lg-6"><br>
-                            <p>Het laatste nummer van de dag. <a href="songofday_page.php"><i>Naar pagina</i></a></p>
-                            <table class="table" style="color: black">
-                                <tr>
-                                    <th scope="col">Nummer</th>
-                                    <th scope="col">Datum</th>
-                                </tr>
-                                <tbody>
-                                <tr>
-                                    <td scope="row"><?php echo songNameDesc ?></td>
-                                    <td scope="row"><?php echo songAddedAtDesc ?></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-md-4">
+                            <?php echo spotifyLinkDesc ?>
                         </div>
-                        <div class="col-lg-6"><br>
-                            <p>De laatste update op de website. <a href="update_page.php"><i>Naar pagina</i></a></p>
-                            <table class="table" style="color:black">
-                                <tr>
-                                    <th scope="col">Titel</th>
-                                    <th scope="col">Datum</th>
-                                </tr>
-                                <tbody style="color: black;">
-                                <tr>
-                                    <td><?php echo updateTitleDesc; ?></td>
-                                    <td><?php echo updateAddedAtDesc; ?></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="row mx-auto">
+                            <div class="col-lg-12 text-right">
+                                <p>Het laatste nummer van de dag. <a href="songofday_page.php"><i>Naar pagina</i></a></p>
+                                <table class="table table-borderless" style="color: black">
+                                    <tr>
+                                        <th scope="col">Nummer</th>
+                                        <th scope="col">Datum</th>
+                                    </tr>
+                                    <tbody>
+                                    <tr>
+                                        <td scope="row"><?php echo songNameDesc ?></td>
+                                        <td scope="row"><?php echo songAddedAtDesc ?></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-12 text-right">
+                                <p>De laatste update op de website. <a href="update_page.php"><i>Naar pagina</i></a></p>
+                                <table class="table table-borderless" style="color:black">
+                                    <tr>
+                                        <th scope="col">Titel</th>
+                                        <th scope="col">Datum</th>
+                                    </tr>
+                                    <tbody style="color: black;">
+                                    <tr>
+                                        <td><?php echo updateTitleDesc; ?></td>
+                                        <td><?php echo updateAddedAtDesc; ?></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <hr/>
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <p><i>Hier komen de statistieken van de webshop te staan!</i></p>

@@ -51,7 +51,7 @@ include '_layouts/_layout-header.phtml';
                             <div class="form-group col-md-6">
                                 <label for="inputName">Ontvanger</label>
                                 <input type="text" class="form-control" name="mail_receiver" id="inputName"
-                                       autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
+                                       autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required value="<?php echo (isset($_GET['adress'])) ? $_GET['adress'] : '' ?>">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputCompany">Onderwerp</label>
@@ -97,7 +97,4 @@ if (isset($_POST['sendNewMail']))
         echo "<script>window.location.href='add_new_mail.php?SHOW_ALERT=ON_SENT'</script>";
     }
 
-}
-
-
-?>
+}?>
