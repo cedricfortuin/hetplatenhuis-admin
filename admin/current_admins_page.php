@@ -91,6 +91,8 @@ include '_layouts/_layout-header.phtml'; ?>
                                                 case "false":
                                                     echo '<span style="color: red" title="Offline">&bull;</span>';
                                                     break;
+                                                default :
+                                                    echo '<span style="color: gray" title="Has not been online yet">&bull;</span>';
                                             } ?>
                                         </td>
                                         <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
