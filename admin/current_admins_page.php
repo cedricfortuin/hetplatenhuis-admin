@@ -84,7 +84,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
-                                        <td class="text-center"><?php echo ($getOnline['ONLINE_USERNAME'] == $setAdmin["USERNAME"]) ? '<span style="color: green" title="Online">&bull;</span>' : '<span style="color: red" title="Offline">&bull;</span>'; ?></td>
+                                        <td class="text-center"><?php echo ($getOnline["ONLINE_USERNAME"] == $setAdmin["USERNAME"]) ? '<span style="color: green" title="Online">&bull;</span>' : '<span style="color: red" title="Offline">&bull;</span>'; ?></td>
                                         <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $setAdmin["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $setAdmin["USERNAME"]; ?></td>
