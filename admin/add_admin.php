@@ -138,7 +138,7 @@ if(isset($_POST['sendMailAndAddAdmin']))
     {
         $mail_receiver_email = $email;
         $mail_receiver_name = $firstname;
-        $button_link = "http://localhost/hetplatenhuis-admin/admin/password/reset_mail.php?token={$generatedToken}&email={$email}";
+        $button_link = "http://hetplatenhuis.nl/password/reset_mail.php?token={$generatedToken}&email={$email}";
         $bootstrap_link = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
         $font_link = "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap";
         $font = "{font-family: 'Ubuntu', sans-serif;}";
