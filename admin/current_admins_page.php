@@ -15,7 +15,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 $getAdmin = $ConnectionLink->query("SELECT * FROM users ORDER BY USER_ID ASC");
-$getOnline = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM online_users"));
 include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml'; ?>
             <section class="content-section">
@@ -81,14 +80,19 @@ include '_layouts/_layout-header.phtml'; ?>
                                     <?php
                                     $i = 0;
                                     while ($setAdmin = mysqli_fetch_array($getAdmin)) {
-                                        $isOnline = false;
-                                        if ($getOnline["ONLINE_USERNAME"] == $setAdmin["USERNAME"]) {
-                                            $isOnline = true;
-                                        }
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
-                                        <td class="text-center"><?php echo ($isOnline) ? '<span style="color: green" title="Online">&bull;</span>' : '<span style="color: red" title="Offline">&bull;</span>'; ?></td>
+                                        <td class="text-center"><?php
+                                            switch ($setAdmin["USER_LAST_ONLINE"]) {
+                                                case "true":
+                                                    echo '<span style="color: green" title="Online">&bull;</span>';
+                                                    break;
+                                                case "false":
+                                                    echo '<span style="color: red" title="Offline">&bull;</span>';
+                                                    break;
+                                            } ?>
+                                        </td>
                                         <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $setAdmin["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $setAdmin["USERNAME"]; ?></td>

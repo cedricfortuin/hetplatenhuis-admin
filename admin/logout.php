@@ -12,7 +12,7 @@ include 'config/config.php';
 $_SESSION = array();
 
 $offlineUser = $_GET['USERNAME'];
-$addOnline = "DELETE FROM online_users WHERE ONLINE_USERNAME = '" . $offlineUser . "'";
+$addOnline = "UPDATE users SET USER_LAST_ONLINE = 'false' WHERE USERNAME = '" . $offlineUser . "'";
 mysqli_query($ConnectionLink, $addOnline);
 
 print_r ($offlineUser);

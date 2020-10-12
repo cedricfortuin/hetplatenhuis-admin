@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["username"] = $username;
                             $_SESSION['loggedin_time'] = time();
 
-                            $addOnline = "INSERT INTO online_users (ONLINE_USERNAME) VALUE ('$username')";
+                            $addOnline = "UPDATE users SET USER_LAST_ONLINE = 'true' WHERE USERNAME = '" . $username . "'";
                             mysqli_query($ConnectionLink, $addOnline);
 
                             // Redirect user to welcome page
