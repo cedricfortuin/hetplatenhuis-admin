@@ -83,9 +83,10 @@ exit;
 
                 <li class="nav-item" role="presentation"><a class="nav-link disabled" href="#"><i
                                 class="fas fa-tags"></i><span>Webshop</span></a></li>
-
-
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./logout.php"><i
+                <?php
+                $link = "./logout.php?USERNAME={$getValue['USERNAME']}"
+                ?>
+                <li class="nav-item" role="presentation"><a class="nav-link" href=<?php echo $link?>><i
                                 class="far fa-user-circle"></i><span>Logout</span></a></li>
 
                 <li class="nav-item" role="presentation"><a class="nav-link" href="https://hetplatenhuis.nl/"><i

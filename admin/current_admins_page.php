@@ -15,7 +15,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 $getAdmin = $ConnectionLink->query("SELECT * FROM users ORDER BY USER_ID ASC");
-
+$getOnline = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM online_users"));
 include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml'; ?>
             <section class="content-section">
@@ -62,6 +62,7 @@ include '_layouts/_layout-header.phtml'; ?>
                             <div class="table-responsive">
                                 <table class="table" style="color:black;">
                                     <tr>
+                                        <th scope="col">Status</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Voornaam</th>
                                         <th scope="col">Gebruikersnaam</th>
@@ -83,6 +84,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
+                                        <td class="text-center"><?php echo ($getOnline['ONLINE_USERNAME'] == $setAdmin["USERNAME"]) ? '<span style="color: green" title="Online">&bull;</span>' : '<span style="color: red" title="Offline">&bull;</span>'; ?></td>
                                         <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $setAdmin["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $setAdmin["USERNAME"]; ?></td>

@@ -29,7 +29,10 @@
                                     <a class="dropdown-item userMenu" role="presentation" href="collection.php"><i
                                             class="fas fa-record-vinyl fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Onze collectie</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item userMenu" role="presentation" href="logout.php"><i
+                                    <?php
+                                    $link = "./logout.php?USERNAME={$getValue['USERNAME']}"
+                                    ?>
+                                    <a class="dropdown-item userMenu" role="presentation" href=<?php echo $link?>><i
                                                 class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     <div class="dropdown-divider"></div>
                                     <p class="dropdown-item disabled userMenu" id="time-home"></p>

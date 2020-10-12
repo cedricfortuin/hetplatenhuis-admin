@@ -6,10 +6,16 @@
  */
 
 session_start();
+include 'config/config.php';
 
 // Unset all of the session variables
 $_SESSION = array();
 
+$offlineUser = $_GET['USERNAME'];
+$addOnline = "DELETE FROM online_users WHERE ONLINE_USERNAME = '" . $offlineUser . "'";
+mysqli_query($ConnectionLink, $addOnline);
+
+print_r ($offlineUser);
 // Destroy the session.
 session_destroy();
 
