@@ -46,27 +46,37 @@ include '_layouts/_layout-header.phtml';
                     <p>Stuur hier een mail<br/><small>Mails worden verstuurd vanuit <i>info@hetplatenhuis.nl.</i></small></p>
                 </div>
                 <div class="form">
-                    <form action="" method="post">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputName">Ontvanger</label>
-                                <input type="text" class="form-control" name="mail_receiver" id="inputName"
-                                       autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required value="<?php echo (isset($_GET['adress'])) ? $_GET['adress'] : '' ?>">
+                    <?php
+
+                    if (!$isDisabledForVisitors) {
+                        ?>
+                        <form action="" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Ontvanger</label>
+                                    <input type="text" class="form-control" name="mail_receiver" id="inputName"
+                                           autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required value="<?php echo (isset($_GET['adress'])) ? $_GET['adress'] : '' ?>">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputCompany">Onderwerp</label>
+                                    <input type="text" class="form-control" name="mail_subject" id="inputCompany"
+                                           autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail">Inhoud van de mail</label>
+                                    <textarea style="resize: none;height: 200px;" type="text" class="form-control" name="mail_text"
+                                              id="inputEmail" autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required></textarea>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputCompany">Onderwerp</label>
-                                <input type="text" class="form-control" name="mail_subject" id="inputCompany"
-                                       autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="inputEmail">Inhoud van de mail</label>
-                                <textarea style="resize: none;height: 200px;" type="text" class="form-control" name="mail_text"
-                                          id="inputEmail" autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-outline-primary" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> name="sendNewMail">Versturen</button>
-                        <br>
-                    </form>
+                            <button type="submit" class="btn btn-outline-primary" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> name="sendNewMail">Versturen</button>
+                            <br>
+                        </form>
+                        <?php
+                    }  else {
+                        ?>
+                        <p class="alert alert-warning text-center">Je hebt niet de bevoegdheden voor deze functie.</p>
+                        <?php
+                    }?>
                 </div>
             </div>
         </div>

@@ -57,29 +57,39 @@ include '_layouts/_layout-header.phtml';
                             <p>Zie hier de huidige updates op de site</p>
                         </div>
                         <div class="form">
-                            <form action="" method="post">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputName">Titel</label>
-                                        <input type="text" class="form-control" name="update_title" id="inputName"
-                                               autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
+                            <?php
+
+                            if (!$isDisabledForVisitors) {
+                                ?>
+                                <form action="" method="post">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputName">Titel</label>
+                                            <input type="text" class="form-control" name="update_title" id="inputName"
+                                                   autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCompany">Auteur</label>
+                                            <input type="text" class="form-control" name="update_author" id="inputCompany"
+                                                   autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputCompany">Auteur</label>
-                                        <input type="text" class="form-control" name="update_author" id="inputCompany"
-                                               autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEmail">Tekst om weer te geven</label>
+                                            <textarea style="resize: none;height: 200px;" type="text" class="form-control" name="update_text"
+                                                      id="inputEmail" autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="inputEmail">Tekst om weer te geven</label>
-                                        <textarea style="resize: none;height: 200px;" type="text" class="form-control" name="update_text"
-                                                  id="inputEmail" autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required></textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-outline-primary" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> name="addUpdate">Uploaden</button>
-                                <br>
-                            </form>
+                                    <button type="submit" class="btn btn-outline-primary" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> name="addUpdate">Uploaden</button>
+                                    <br>
+                                </form>
+                                <?php
+                            }  else {
+                                ?>
+                                <p class="alert alert-warning text-center">Je hebt niet de bevoegdheden voor deze functie.</p>
+                                <?php
+                            }?>
                         </div>
                     </div>
                 </div>
