@@ -11,7 +11,7 @@ include_once 'database_strings.php';
 $ConnectionLink = mysqli_connect(EXTERNAL_HOST, EXTERNAL_USER, EXTERNAL_PASSWORD, EXTERNAL_DATABASE);
 
 //This ConnectionLink is for the local host
-//$ConnectionLink = mysqli_connect(LOCAL_HOST, LOCAL_USER, LOCAL_PASSWORD, LOCAL_DATABASE );
+//$ConnectionLink = mysqli_connect(LOCAL_HOST, LOCAL_USER, LOCAL_PASSWORD, LOCAL_DATABASE);
 
 // Check connection
 if (!$ConnectionLink) {

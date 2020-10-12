@@ -84,7 +84,7 @@ if (isset($_POST['sendNewMail']))
     $mail->setFrom('info@hetplatenhuis.nl', 'Het Platenhuis');
     $mail->addAddress($mail_receiver);
 
-    $mail->isHTML(false);
+    $mail->isHTML(true);
 
     $mail->Subject = $mail_subject;
     //$mail->addEmbeddedImage('path/to/image_file.jpg', 'image_cid');
