@@ -2,7 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
-include "database_strings.php";
+include_once "database_strings.php";
 
 $mail = new PHPMailer(true);
 

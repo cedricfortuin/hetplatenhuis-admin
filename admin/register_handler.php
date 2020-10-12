@@ -6,6 +6,7 @@
  */
 
 include "config/config.php";
+include_once 'config/mail_config.php';
 
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = $firstname = $lastname = $email = $user_role ="";
@@ -81,24 +82,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_role = trim($_POST["user_role"]);
     }
 
-    // Validate password
-    if (empty(trim($_POST["password"]))) {
-        $password_err = "Please enter a password.";
-    } elseif (strlen(trim($_POST["password"])) < 6) {
-        $password_err = "Password must have at least 6 characters.";
-    } else {
-        $password = trim($_POST["password"]);
-    }
-
-    // Validate confirm password
-    if (empty(trim($_POST["confirm_password"]))) {
-        $confirm_password_err = "Please confirm password.";
-    } else {
-        $confirm_password = trim($_POST["confirm_password"]);
-        if (empty($password_err) && ($password != $confirm_password)) {
-            $confirm_password_err = "Password did not match.";
-        }
-    }
+//    // Validate password
+//    if (empty(trim($_POST["password"]))) {
+//        $password_err = "Please enter a password.";
+//    } elseif (strlen(trim($_POST["password"])) < 6) {
+//        $password_err = "Password must have at least 6 characters.";
+//    } else {
+//        $password = trim($_POST["password"]);
+//    }
+//
+//    // Validate confirm password
+//    if (empty(trim($_POST["confirm_password"]))) {
+//        $confirm_password_err = "Please confirm password.";
+//    } else {
+//        $confirm_password = trim($_POST["confirm_password"]);
+//        if (empty($password_err) && ($password != $confirm_password)) {
+//            $confirm_password_err = "Password did not match.";
+//        }
+//    }
 
     // Check input errors before inserting in database
     if (empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($firstname_err) && empty($lastname_err) && empty($email_err) && empty($user_role_err)) {
@@ -120,9 +121,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
-                // Redirect to login page
+
+                // Redirect to all admins page with positive alert
                 echo "<script>window.location.href='current_admins_page.php?SHOW_ALERT=ON_SUBMIT'</script>";
             } else {
+
+                // Redirect to all admins page with negative alert
                 echo "<script>window.location.href='current_admins_page.php?SHOW_ALERT=ON_ERROR'</script>";
             }
 
@@ -132,5 +136,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Close connection
-    mysqli_close($ConnectionLink);
+    $ConnectionLink->close();
 }

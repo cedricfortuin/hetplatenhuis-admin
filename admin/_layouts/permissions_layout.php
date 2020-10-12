@@ -1,5 +1,6 @@
 <?php
-include 'config/config.php';
+include_once 'config/config.php';
+include_once 'models/define_variables.php';
 
 if(userRole === 'visitor')
 {
