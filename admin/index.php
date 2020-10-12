@@ -18,8 +18,6 @@ include 'collect_all_datahandlers.php';
         <div class="container-fluid">
             <section class="content-section" style="color: black;">
                 <div class="container">
-                    <p class="alert alert-primary alert-dismissible">De adminomgeving is vernieuwd! Kijk gauw rond! <a
-                                href="new_features.php">Wat is er nieuw...</a></p>
                     <div class="row">
                         <div class="col-md-8">
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
