@@ -30,39 +30,49 @@ include '_layouts/_layout-header.phtml';
                             <div>
                                 <p>Maak hier een nieuwe gebruiker aan</p>
                             </div>
-                            <form action="" method="post">
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label for="firstname">Voornaam</label>
-                                        <input id="firstname" type="text" name="firstname" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?> >
+                            <?php
+
+                            if (!$isDisabledForVisitorsAndSubadmins) {
+                                ?>
+                                <form action="" method="post">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="firstname">Voornaam</label>
+                                            <input id="firstname" type="text" name="firstname" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?> >
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="lastname">Achternaam</label>
+                                            <input id="lastname" type="text" name="lastname" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="lastname">Achternaam</label>
-                                        <input id="lastname" type="text" name="lastname" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="username">Gebruikersnaam</label>
+                                            <input id="username" type="text" name="username" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="email">Email</label>
+                                            <input id="email" type="email" name="email" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="userrole">Gebruikersrol</label>
+                                            <select id="userrole" class="form-control" name="user_role" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
+                                                <option class="nav-item" value="admin">Administrator</option>
+                                                <option class="nav-item" value="subadmin">Beheerder</option>
+                                                <option class="nav-item" value="visitor">Bezoeker</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-md-4">
-                                        <label for="username">Gebruikersnaam</label>
-                                        <input id="username" type="text" name="username" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-outline-primary" value="Toevoegen" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?> name="sendMailAndAddAdmin">
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="email">Email</label>
-                                        <input id="email" type="email" name="email" autocomplete="off" class="form-control" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="userrole">Gebruikersrol</label>
-                                        <select id="userrole" class="form-control" name="user_role" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?>>
-                                            <option class="nav-item" value="admin">Administrator</option>
-                                            <option class="nav-item" value="subadmin">Beheerder</option>
-                                            <option class="nav-item" value="visitor">Bezoeker</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" class="btn btn-outline-primary" value="Toevoegen" <?= ($isDisabledForVisitorsAndSubadmins) ? 'disabled' : '' ?> name="sendMailAndAddAdmin">
-                                </div>
-                            </form>
+                                </form>
+                            <?php
+                            } else {
+                                ?>
+                                <p class="alert alert-warning text-center">Je hebt niet de bevoegdheden voor deze functie.</p>
+                                <?php
+                            } ?>
                         </div>
                     </div>
                 </div>

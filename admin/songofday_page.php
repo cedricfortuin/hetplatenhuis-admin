@@ -135,6 +135,10 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                         <p>Voeg hier een nieuw nummer van de dag toe</p>
                     </div>
                     <div class="form">
+                        <?php
+
+                        if (!$isDisabledForVisitors) {
+                            ?>
                         <form action="" method="post">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -161,6 +165,12 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                             <button type="submit" class="btn btn-outline-primary" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> name="addSongOfDay">Toevoegen</button>
                             <br><br>
                         </form>
+                        <?php
+                        } else {
+                            ?>
+                                <p class="alert alert-warning text-center">Je hebt niet de bevoegdheden voor deze functie.</p>
+                        <?php
+                        }?>
                     </div>
                 </div>
             </div>
