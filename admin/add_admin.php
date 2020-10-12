@@ -175,7 +175,8 @@ if(isset($_POST['sendMailAndAddAdmin']))
                             <div class='row'>
                                 <div class='col-md-12'>
                                     <p>Met vriendelijke groet,<br/> Het Platenhuis<br/>
-                                    <small><i>Let op, deze mail is persoonlijk. Deel deze dus niet!</i></small></p>
+                                    <small><i>Let op, deze mail is persoonlijk. Deel deze dus niet! Daarnaast vervalt deze
+                                    mail als je je wachtwoord instelt.</i></small></p>
                                 </div>
                             </div>
                         </div>";

@@ -61,7 +61,6 @@ include '_layouts/_layout-header.phtml'; ?>
                             <div class="table-responsive">
                                 <table class="table" style="color:black;">
                                     <tr>
-                                        <th scope="col">Status</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Voornaam</th>
                                         <th scope="col">Gebruikersnaam</th>
@@ -83,7 +82,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
-                                        <td class="text-center"><?php
+                                        <td><?php
                                             switch ($setAdmin["USER_LAST_ONLINE"]) {
                                                 case "true":
                                                     echo '<span style="color: green" title="Online">&bull;</span>';
@@ -93,9 +92,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                                     break;
                                                 default :
                                                     echo '<span style="color: gray" title="Has not been online yet">&bull;</span>';
-                                            } ?>
-                                        </td>
-                                        <td><a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
+                                            } ?>&nbsp;<a href="add_new_mail.php?adress=<?php echo $setAdmin["USER_EMAIL"]; ?>"><?php echo $setAdmin["USER_EMAIL"]; ?></a></td>
                                         <td><?php echo $setAdmin["USER_FIRSTNAME"]; ?></td>
                                         <td><?php echo $setAdmin["USERNAME"]; ?></td>
                                         <td class="text-center">
