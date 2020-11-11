@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/mails/add-admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/mails/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/mails/images/facebook2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/mails/images/instagram2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/mails/images/vinyl-close.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/password/reset_mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/11373b62-9676-4e57-894a-23c9a0a44996/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hetplatenhuis-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hetplatenhuis-admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f50d4a62-b976-4bf9-a65a-8fbfc91654b9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/permissions_layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/permissions_layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_new_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_new_mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/admin/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/mail_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/mail_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/database_strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/database_strings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/register_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +88,17 @@
       <workItem from="1602358361892" duration="12000" />
       <workItem from="1602408515104" duration="9843000" />
       <workItem from="1602498911322" duration="3187000" />
+      <workItem from="1603307580850" duration="464000" />
+      <workItem from="1603311238873" duration="144000" />
+      <workItem from="1603348984524" duration="397000" />
+      <workItem from="1603784233058" duration="426000" />
+      <workItem from="1603824562733" duration="247000" />
+      <workItem from="1603915884196" duration="92000" />
+      <workItem from="1604077453537" duration="13000" />
+      <workItem from="1604313100971" duration="20000" />
+      <workItem from="1604943384108" duration="92000" />
+      <workItem from="1604948009231" duration="1205000" />
+      <workItem from="1605123017300" duration="81000" />
     </task>
     <servers />
   </component>
