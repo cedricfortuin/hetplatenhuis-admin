@@ -49,14 +49,11 @@ $getConfigDataUUIDList = $ConnectionLink->query("SELECT * FROM configuration WHE
                                 }?>
                                 <p class="card-text">Aantal albums in database: <?php echo $countItems?></p>
                                 <div class="row">
-                                    <div class="col-md-4 text-left">
+                                    <div class="col-md-6 text-left">
                                         <p class="card-text"><a href="edit_artist.php?page_uuid=<?php echo $showResult['ARTIST_UUID']?>"><i class="fas fa-edit"></i></a></p>
                                     </div>
-                                    <div class="col-md-4 text-center">
-                                        <p class="card-text"><a href="add_album.php?page_uuid=<?php echo $showResult['ARTIST_UUID']?>"><i class="fas fa-list"></i></a></p>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <p class="card-text"><a href="add_album.php?page_uuid=<?php echo $showResult['ARTIST_UUID']?>"><i class="fas fa-plus"></i></a></p>
+                                    <div class="col-md-6 text-right">
+                                        <p class="card-text"><a href="album_list.php?page_uuid=<?php echo $showResult['ARTIST_UUID']?>"><i class="fas fa-list"></i></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -71,5 +68,5 @@ $getConfigDataUUIDList = $ConnectionLink->query("SELECT * FROM configuration WHE
         </div>
     </section>
 </div>
-
+</div>
 <?php include '_layouts/_layout-footer.phtml';?>

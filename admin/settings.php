@@ -19,7 +19,7 @@ $getConfigDataSOTDLIST = $ConnectionLink->query("SELECT * FROM configuration WHE
 $getConfigDataArtistList = $ConnectionLink->query("SELECT * FROM configuration WHERE `KEY` = 'CONFIG_ITEMS_SONG-OF-DAY_LIST'")->fetch_array();
 
 if (isset($_REQUEST['updateData'])) {
-    
+
 }
 
 ?>

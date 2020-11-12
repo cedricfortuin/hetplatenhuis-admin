@@ -123,6 +123,7 @@ if (isset($_REQUEST['addData'])) {
         </div>
     </section>
 </div>
+</div>
 <script>
     document.querySelector('.custom-file-input').addEventListener('change', function (e) {
         var name = document.getElementById("customFileInput").files[0].name;

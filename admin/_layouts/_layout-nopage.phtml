@@ -70,8 +70,18 @@ $getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE
                         <i class="fas fa-users"></i><span>Profielen</span></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
                         <h6 class="dropdown-header"><i class="fas fa-users"></i> Profielen</h6>
-                        <a class="dropdown-item" href="./current_admins_page.php">Gebruikers</a>
-                        <a class="dropdown-item" href="./add_admin.php">Gebruiker toevoegen</a>
+                        <a class="dropdown-item" href="#">Statistieken</a>
+                        <a class="dropdown-item" href="#">Alle gebruikers</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-lock"></i><span>Admins</span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                        <h6 class="dropdown-header"><i class="fas fa-users"></i> Admins</h6>
+                        <a class="dropdown-item" href="./current_admins_page.php">Huidige admins</a>
+                        <a class="dropdown-item" href="./add_admin.php">Admin toevoegen</a>
                     </div>
                 </li>
 

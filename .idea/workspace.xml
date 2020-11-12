@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/add_album.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/current_artists_page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/edit_artist.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/img/GR-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/img/acdc-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/img/ds-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/img/normaal-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/img/pf-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/img/queen-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/elo-banner.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_album.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/album_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/add_artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_artists.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/current_admins_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_admins_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/songofday_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/current_artists_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_artists_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/settings.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +107,10 @@
       <workItem from="1604313100971" duration="20000" />
       <workItem from="1604943384108" duration="92000" />
       <workItem from="1604948009231" duration="1205000" />
-      <workItem from="1605123017300" duration="16795000" />
+      <workItem from="1605123017300" duration="19251000" />
+      <workItem from="1605174897014" duration="26000" />
+      <workItem from="1605175750148" duration="2980000" />
+      <workItem from="1605197270937" duration="1337000" />
     </task>
     <servers />
   </component>
@@ -183,9 +182,10 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230916178" />
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602438318649" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605140596779">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605166515372">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605140596779" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605166515372" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605160435932" />
   </component>
 </project>
