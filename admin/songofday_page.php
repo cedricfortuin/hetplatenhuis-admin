@@ -174,10 +174,9 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
-    </div>
+</div>
     <?php
     $stmt->close();
 }

@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f50d4a62-b976-4bf9-a65a-8fbfc91654b9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/add_album.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/current_artists_page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/edit_artist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/GR-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/acdc-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/ds-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/normaal-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/pf-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/queen-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_artists.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/database_strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/database_strings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/register_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/current_admins_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_admins_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/songofday_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday_page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +68,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;Cookie&#10;JavaScript" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/ProjectPim" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -98,7 +111,7 @@
       <workItem from="1604313100971" duration="20000" />
       <workItem from="1604943384108" duration="92000" />
       <workItem from="1604948009231" duration="1205000" />
-      <workItem from="1605123017300" duration="81000" />
+      <workItem from="1605123017300" duration="16795000" />
     </task>
     <servers />
   </component>
@@ -116,11 +129,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="292" key="#Composer/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230518307" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602231111412">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605128467975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602231111412" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602101605156" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605128467975" />
     <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602071433877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -142,11 +155,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602072304442" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602221981845">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605138857662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602085982096" />
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602221981845" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605138857662" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602011199864">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -170,9 +183,9 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230916178" />
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602438318649" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602258991343">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605140596779">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602258991343" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605140596779" />
   </component>
 </project>
