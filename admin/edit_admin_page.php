@@ -1,4 +1,4 @@
-<?php include '_layouts/_layout-nopage.phtml';?>
+<?php include '_layouts/_layout-header.phtml';?>
             <div class="container-fluid">
                 <section class="content-section" style="color: black;">
                     <div class="container">

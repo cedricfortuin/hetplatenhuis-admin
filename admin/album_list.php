@@ -2,20 +2,16 @@
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-//include 'collect_all_datahandlers.php';
-include '_layouts/_layout-nopage.phtml';
+include '_layouts/_layout-header.phtml';
 
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
 
-$uuid = $_GET['page_uuid'];
+$getPageArtistDataArray = $ConnectionLink->query("SELECT * FROM artist_info WHERE ARTIST_UUID = '" . $_GET['page_uuid'] ."'")->fetch_array();
+$getPageAlbumList = $ConnectionLink->query("SELECT * FROM discography WHERE ARTIST_UUID = '" . $_GET['page_uuid']. "'");
+
+
 $album_name = $release = $present =  '';
 $album_name_err = $release_err = $present_err = '';
 
-$getPageDataArray = $ConnectionLink->query("SELECT * FROM artist_info WHERE ARTIST_UUID = '$uuid'")->fetch_array();
-$getPageAlbumList = $ConnectionLink->query("SELECT * FROM discography WHERE ARTIST_UUID = '$uuid'");
 
 if (isset($_REQUEST['addData'])) {
 
@@ -31,16 +27,20 @@ if (isset($_REQUEST['addData'])) {
         $release = mysqli_escape_string($ConnectionLink, $_POST['release']);
     }
 
-    $present = mysqli_escape_string($ConnectionLink, $_POST['is_present']);
+    if (empty($_POST['is_present'])) {
+        $present_err = 'is-invalid';
+    } else {
+        $present = mysqli_escape_string($ConnectionLink, $_POST['is_present']);
+    }
     $date = date('Y/m/d H:i:s');
 
 
     $query = "INSERT INTO discography (ARTIST_UUID, DISCO_ALBUM_TITLE, DISCO_ALBUM_RELEASE_YEAR, DISCO_ALBUM_IS_PRESENT, DISCO_ALBUM_DATE_ADDED)
-                VALUES ('$uuid', '$album_name', '$release', '$present', '$date')";
+                VALUES ('".$_GET['page_uuid']."', '$album_name', '$release', '$present', '$date')";
 
     if (empty($album_name_err) && empty($release_err) && empty($present_err)) {
         if (mysqli_query($ConnectionLink, $query)) {
-            echo "<script>window.location.href = 'album_list.php?page_uuid={$uuid}'</script>";
+            echo "<script>window.location.href = 'album_list.php?page_uuid={$_GET['page_uuid']}'</script>";
         } else {
             echo "Error";
         }
@@ -49,13 +49,12 @@ if (isset($_REQUEST['addData'])) {
 
 if (isset($_GET['action']) == 'delete') {
     $id = $_GET['id'];
-//    $sql = "UPDATE discography SET DISCO_IS_DELETED = 1 WHERE DISCO_ALBUM_ID = '$id'";
     $sql = "DELETE FROM discography WHERE DISCO_ALBUM_ID = '$id'";
 
     if (mysqli_query($ConnectionLink, $sql)) {
-        echo "<script>window.location.href = 'album_list.php?page_uuid={$uuid}'</script>";
+        echo "<script>window.location.href = 'album_list.php?page_uuid={$_GET['page_uuid']}'</script>";
     } else {
-        echo "<script>window.location.href = 'album_list.php?page_uuid={$uuid}'</script>";
+        echo "<script>window.location.href = 'album_list.php?page_uuid={$_GET['page_uuid']}'</script>";
     }
 }
 
@@ -64,7 +63,7 @@ if (isset($_GET['action']) == 'delete') {
     <section class="content-section">
         <div class="container">
             <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                <h3 class="text-dark mb-0">Album aan <?php echo $getPageDataArray['ARTIST_NAME']; ?> toevoegen</h3>
+                <h3 class="text-dark mb-0">Album aan <?php echo $getPageArtistDataArray['ARTIST_NAME']; ?> toevoegen</h3>
             </div>
             <div class="row mt-4 mx-auto">
                 <div class="col-md-12">
@@ -101,7 +100,7 @@ if (isset($_GET['action']) == 'delete') {
                                             break;
                                     }
                                     ?>
-                                    <td><a href="album_list.php?page_uuid=<?php echo $uuid?>&&action=delete&&id=<?php echo $showList['DISCO_ALBUM_ID']?>"><i class="fa fa-trash fa-fw"></i></a></td>
+                                    <td><a href="album_list.php?page_uuid=<?php echo $_GET['page_uuid']?>&&action=delete&&id=<?php echo $showList['DISCO_ALBUM_ID']?>"><i class="fa fa-trash fa-fw"></i></a></td>
                                 </tr>
                                 <?php
                                 $i++;
@@ -111,7 +110,6 @@ if (isset($_GET['action']) == 'delete') {
                         </table>
                         <div class="form">
                             <form method="post" action="" enctype='multipart/form-data'>
-
                                 <div class="form-row">
                                     <div class="col-md-4">
                                         <input id="editFirstname" class="form-control <?php echo $album_name_err?>" name="album_name" placeholder="Naam van album:">

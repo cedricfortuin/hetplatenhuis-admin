@@ -5,17 +5,6 @@
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
 
-session_start();
-include 'config/config.php';
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-
-$getAdmin = $ConnectionLink->query("SELECT * FROM users ORDER BY USER_ID ASC");
-include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml'; ?>
             <section class="content-section">
                 <div class="container">
@@ -78,7 +67,7 @@ include '_layouts/_layout-header.phtml'; ?>
                                     </tr>
                                     <?php
                                     $i = 0;
-                                    while ($setAdmin = mysqli_fetch_array($getAdmin)) {
+                                    while ($setAdmin = mysqli_fetch_array($getAdminArrayDesc)) {
                                     ?>
                                     <tbody style="color: black;">
                                     <tr>
@@ -115,9 +104,9 @@ include '_layouts/_layout-header.phtml'; ?>
                                         if(!$isDisabledForVisitorsAndSubadmins)
                                         { ?>
                                             <td><a
-                                                        href="edit_admin_page.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>">Bewerken</a></td>
+                                                        href="edit_admin_page.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>"><i class="fa fa-user-edit fa-fw"></i></a></td>
                                             <td><a
-                                                        href="delete_admin_handler.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>&USER_EMAIL=<?php echo $setAdmin["USER_EMAIL"]; ?>">Verwijderen</a>
+                                                        href="delete_admin_handler.php?USER_ID=<?php echo $setAdmin["USER_ID"]; ?>&USER_EMAIL=<?php echo $setAdmin["USER_EMAIL"]; ?>"><i class="fa fa-trash fa-fw"></i></a>
                                             </td>
                                         <?php } ?>
                                     </tr>

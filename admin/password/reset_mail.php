@@ -65,6 +65,9 @@
                                                         $deleteSql = $ConnectionLink->query("DELETE FROM reset_password WHERE USER_TOKEN_MAIL = '$userEmail'");
 
                                                         if (mysqli_query($ConnectionLink, $insertSql, $deleteSql)) {
+                                                            session_start();
+                                                            $_SESSION["loggedin"] = true;
+
                                                             echo "<script>window.location.href='../login.php'</script>";
                                                         } else {
                                                             echo "<script>window.location.href='../login.php'</script>";

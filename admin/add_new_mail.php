@@ -4,21 +4,11 @@
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-
-session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-include 'config/mail_config.php';
-include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml';
+include 'config/mail_config.php';
 ?>
     <section class="content-section" style="color: black;">
         <div class="container">
-            <p class="alert alert-warning text-center">Let op, deze functie is nog in ontwikkeling!</p>
             <?php
             if(isset($_GET['SHOW_ALERT']))
             {

@@ -2,22 +2,10 @@
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-
-// Initialize the session
-session_start();
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-
-// Including
-include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml';
 
 // Get the total number of records from our table "students".
-$total_pages = $ConnectionLink->query('SELECT * FROM songofday')->num_rows;
-$num_results_on_page = 4;
+$num_results_on_page = $getConfigDataSOTDList['CONFIG_VALUE'];
 // Check if the page number is specified and check if it's a number, if not return the default page number which is 1.
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID DESC LIMIT ?,?')) {
@@ -84,9 +72,7 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                                         <?php
                                         if (!$isDisabledForVisitors)
                                         { ?>
-                                            <td><a
-                                                        href="delete-song.php?SONG_ID=<?php echo $getSongForTable["SONG_ID"] ?>">Verwijderen</a>
-                                            </td>
+                                            <td><a href="delete-song.php?SONG_ID=<?php echo $getSongForTable["SONG_ID"] ?>"><i class="fa fa-trash fa-fw"></i></a></td>
                                         <?php }
 
                                         ?>
@@ -143,12 +129,12 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputName">Naam</label>
-                                    <input type="text" class="form-control" name="song" id="inputName"
+                                    <input type="text" class="form-control" name="song" id="inputName" value="<?php echo (isset($song_name)) ? $song_name : '';?>"
                                            autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputArtist">Band of Artiest</label>
-                                    <input type="text" class="form-control" name="band"
+                                    <input type="text" class="form-control" name="band" value="<?php echo (isset($song_artist)) ? $song_artist : '';?>"
                                            id="inputArtist" autocomplete="on" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required>
                                 </div>
                             </div>
@@ -159,7 +145,7 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                                               name="spotify"
                                               placeholder="Spotify > rechtermuisknop op nummer > delen > Embed-code kopiëren > hierin plaatsen"
                                               id="inputEmail"
-                                              autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required></textarea>
+                                              autocomplete="off" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> required><?php echo (isset($spotify_link)) ? $spotify_link : '';?></textarea>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-outline-primary" <?= ($isDisabledForVisitors) ? 'disabled' : '' ?> name="addSongOfDay">Toevoegen</button>
@@ -186,12 +172,12 @@ include './_layouts/_layout-footer.phtml';
     if (isset($_REQUEST['addSongOfDay']))
     {
         // Escape the values for security.
-        $first_name = mysqli_real_escape_string($ConnectionLink, $_POST['song']);
-        $last_name = mysqli_real_escape_string($ConnectionLink, $_POST['band']);
+        $song_name = mysqli_real_escape_string($ConnectionLink, $_POST['song']);
+        $song_artist = mysqli_real_escape_string($ConnectionLink, $_POST['band']);
         $spotify_link = mysqli_real_escape_string($ConnectionLink, $_POST['spotify']);
 
         // Insert the data into the database.
-        $sql = "INSERT INTO songofday (SONG_NAME, SONG_ARTIST, SPOTIFY_LINK) VALUES ('$first_name', '$last_name', '$spotify_link')";
+        $sql = "INSERT INTO songofday (SONG_NAME, SONG_ARTIST, SPOTIFY_LINK) VALUES ('$song_name', '$song_artist', '$spotify_link')";
         if (mysqli_query($ConnectionLink, $sql)) {
             echo "<script>window.location.href='songofday_page.php?SHOW_ALERT=ON_SUBMIT'</script>";
         } else {

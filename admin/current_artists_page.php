@@ -3,20 +3,7 @@
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
 
-// Initialize the session
-session_start();
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-
-// Including
-include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml';
-$getPageDataArray = $ConnectionLink->query("SELECT * FROM artist_info ORDER BY ARTIST_NAME");
-$getConfigDataArtistList = $ConnectionLink->query("SELECT * FROM configuration WHERE `KEY` = 'CONFIG_ITEMS_ROW_ARTISTS'")->fetch_array();
-$getConfigDataUUIDList = $ConnectionLink->query("SELECT * FROM configuration WHERE `KEY` = 'CONFIG_ENABLE_UUID_LIST'")->fetch_array();
 ?>
 <div class="container-fluid">
     <section class="content-section">
@@ -32,13 +19,13 @@ $getConfigDataUUIDList = $ConnectionLink->query("SELECT * FROM configuration WHE
                     $uuid = $showResult['ARTIST_UUID'];
                     $countItems = $ConnectionLink->query("SELECT * FROM discography WHERE ARTIST_UUID = '$uuid'")->num_rows;
                     ?>
-                    <div class="col-md-<?php echo $getConfigDataArtistList['VALUE']?> mt-4">
+                    <div class="col-md-<?php echo $getConfigDataArtistList['CONFIG_VALUE']?> mt-4">
                         <div class="card">
                             <img class="card-img-top" src="<?php echo $showResult['ARTIST_IMAGE']?>" alt="Image <?php echo $showResult['ARTIST_NAME']?>">
                             <h5 class="card-header"><?php echo $showResult['ARTIST_NAME']?></h5>
                             <div class="card-body">
                                 <p class="card-text">Toegevoegd op: <?php echo date('d/m/Y', $timestamp)?></p>
-                                <?php if ($getConfigDataUUIDList['VALUE'] == 'On') {
+                                <?php if ($getConfigDataUUIDList['CONFIG_VALUE'] == 1) {
                                     ?>
                                         <p class="card-text">UUID: <?php echo $showResult['ARTIST_UUID']?></p>
                                     <?php

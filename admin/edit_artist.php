@@ -2,13 +2,8 @@
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-//include 'collect_all_datahandlers.php';
-include '_layouts/_layout-nopage.phtml';
+include '_layouts/_layout-header.phtml';
 
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
 $pageUuid = $_GET['page_uuid'];
 
 $getPageDataArray = $ConnectionLink->query("SELECT * FROM artist_info WHERE ARTIST_UUID = '$pageUuid'")->fetch_array();
@@ -60,6 +55,7 @@ if (isset($_REQUEST['updateData']) && isset($pageUuid)) {
 <div class="container-fluid">
     <section class="content-section">
         <div class="container">
+            <small><a href="current_artists_page.php"><i class="fas fa-long-arrow-alt-left"></i> Terug</a></small><br>
             <div class="d-sm-flex justify-content-between align-items-center mb-4">
                 <h3 class="text-dark mb-0">Bewerk <?php echo $getPageDataArray['ARTIST_NAME']?></h3>
             </div>
@@ -72,9 +68,9 @@ if (isset($_REQUEST['updateData']) && isset($pageUuid)) {
                         <form method="post" action="" enctype='multipart/form-data'>
                             <label for="editFirstname">Naam:</label>
                             <input id="editFirstname" class="form-control" value="<?php echo $getPageDataArray['ARTIST_NAME']?>" name="artist_name"><br/>
-                            <label for="editFirstname">Over de band:</label>
+                            <label for="editFirstname">Deel I:</label>
                             <textarea id="editFirstname" class="form-control" name="about" style="resize: vertical; width: 100%; height: 100px;" rows="2"><?php echo $getPageDataArray['ARTIST_CONTENT_ABOUT']?></textarea><br>
-                            <label for="editLastname">Geschiedenis:</label>
+                            <label for="editLastname">Deel II:</label>
                             <textarea id="editLastname" class="form-control" name="history" style="resize: vertical; width: 100%; height: 100px;" rows="2"><?php echo $getPageDataArray['ARTIST_CONTENT_HISTORY']?></textarea><br>
                             <label for="editLastname">Volg knop Spotify:</label>
                             <textarea id="editLastname" class="form-control" name="follow" style="resize: none; width: 100%; height: 100px;" rows="2"><?php echo $getPageDataArray['ARTIST_FOLLOW_BUTTON']?></textarea><br>

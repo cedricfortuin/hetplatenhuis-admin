@@ -4,15 +4,6 @@
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-
-session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-include 'collect_all_datahandlers.php';
 include '_layouts/_layout-header.phtml';
 ?>
             <section class="content-section" style="color: black;">
@@ -123,15 +114,15 @@ include '_layouts/_layout-header.phtml';
                                         <td><?php echo $getUpdateForTable["UPDATE_TITLE"]; ?></td>
                                         <td><?php echo $getUpdateForTable["UPDATE_TEXT"]; ?></td>
                                         <td><?php echo $getUpdateForTable["UPDATE_AUTHOR"]; ?></td>
-                                        <td><?php echo $getUpdateForTable["UPDATE_DATE"]; ?></td>
+                                        <td><?php echo $getUpdateForTable["UPDATE_CREATED_AT"]; ?></td>
                                         <?php
                                         if (!$isDisabledForVisitors)
                                         { ?>
                                             <td><a
-                                                        href="edit_update_page.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>">Bewerken</a>
+                                                        href="edit_update_page.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>"><i class="fa fa-edit fa-fw"></i></a>
                                             </td>
                                             <td><a
-                                                        href="delete_update_handler.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>">Verwijderen</a>
+                                                        href="delete_update_handler.php?UPDATE_ID=<?php echo $getUpdateForTable["UPDATE_ID"]; ?>"><i class="fa fa-trash fa-fw"></i></a>
                                             </td>
                                         <?php } ?>
                                     </tr>

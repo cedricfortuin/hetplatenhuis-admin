@@ -5,20 +5,8 @@
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
 
-session_start();
-include_once 'config/config.php';
-include_once 'config/mail_config.php';
-$new_sql = mysqli_query($ConnectionLink,  "SELECT * FROM users WHERE USER_ID ='". $_SESSION['id'] ."'");
-$username = mysqli_fetch_array($new_sql);
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-
-include '_layouts/permissions_layout.php';
 include '_layouts/_layout-header.phtml';
+include_once 'config/mail_config.php';
 ?>
             <div class="container">
                 <div class="row">
@@ -148,7 +136,8 @@ if(isset($_POST['sendMailAndAddAdmin']))
     {
         $mail_receiver_email = $email;
         $mail_receiver_name = $firstname;
-        $button_link = "https://admin.hetplatenhuis.nl/password/reset_mail.php?token={$generatedToken}&email={$email}";
+        //$button_link = "https://admin.hetplatenhuis.nl/password/reset_mail.php?token={$generatedToken}&email={$email}";
+        $button_link = "https://localhost/hetplatenhuis-admin/admin/password/reset_mail.php?token={$generatedToken}&email={$email}";
         $bootstrap_link = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
         $font_link = "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap";
         $font = "{font-family: 'Ubuntu', sans-serif;}";
@@ -164,6 +153,7 @@ if(isset($_POST['sendMailAndAddAdmin']))
                                     <h4>Hoi {$firstname},</h4>
                                     <p>Je bent door een beheerder aangemeld bij de adminomgeving van Het Platenhuis. <br/>
                                         Dit is je gebruikersnaam: <b>{$username}</b>. <br/>
+                                        Je nieuwe rol wordt: <b>{$user_role}</b>
                                         Klik op de volgende link om je wachtwoord in te stellen: </p>
                                 </div>
                             </div>

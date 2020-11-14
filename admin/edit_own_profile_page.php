@@ -1,5 +1,4 @@
-<?php include '_layouts/_layout-nopage.phtml';
-include 'collect_all_datahandlers.php';
+<?php include '_layouts/_layout-header.phtml';
 ?>
             <div class="container-fluid">
                 <section class="content-section" style="color: black;">
@@ -33,27 +32,27 @@ include 'collect_all_datahandlers.php';
                                             <h3 class="text-dark mb-0">Je profiel aanpassen</h3>
                                         </div>
                                         <div>
-                                            <p><?php echo 'Hoi ' . userFirstname . ', je kunt hier je profiel aanpassen'?></p>
+                                            <p><?php echo 'Hoi ' . $getAdminBySessionIdArray[user_firstname] . ', je kunt hier je profiel aanpassen'?></p>
                                         </div>
                                         <form action="" method="post">
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label for="firstname">Voornaam</label>
-                                                    <input id="firstname" type="text" name="firstname-edit" autocomplete="off" class="form-control" value="<?php echo userFirstname ?>" required>
+                                                    <input id="firstname" type="text" name="firstname-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[user_firstname] ?>" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="lastname">Achternaam</label>
-                                                    <input id="lastname" type="text" name="lastname-edit" autocomplete="off" class="form-control" value="<?php echo userLastname ?>" required>
+                                                    <input id="lastname" type="text" name="lastname-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[user_lastname] ?>" required>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label for="username">Gebruikersnaam</label>
-                                                    <input id="username" type="text" name="username-edit" autocomplete="off" class="form-control" value="<?php echo username ?>" required>
+                                                    <input id="username" type="text" name="username-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[username] ?>" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="email">Email</label>
-                                                    <input id="email" type="text" name="email-edit" autocomplete="off" class="form-control" value="<?php echo userEmail ?>" required>
+                                                    <input id="email" type="text" name="email-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[user_mail] ?>" required>
                                                 </div>
                                             </div>
                                             <hr>

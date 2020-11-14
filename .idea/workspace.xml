@@ -5,17 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/img/elo-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/_layouts/_layout-navbar.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/controllers/getConfigValueByKeyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/data_request_handlers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-nopage.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_album.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/album_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_artists.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/_layouts/permissions_layout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_new_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_new_mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/album_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/album_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/collect_all_datahandlers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/collection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/database_strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/mail_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/mail_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/current_admins_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_admins_page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/current_artists_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_artists_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_admin_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_admin_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_artist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_own_profile_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_own_profile_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/models/define_variables.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/password/reset_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/password/reset_mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/songofday_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/update_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update_page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +51,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="PHTML File" />
       </list>
     </option>
   </component>
@@ -71,6 +91,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\composetest" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\password" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin" />
     </key>
@@ -111,6 +132,9 @@
       <workItem from="1605174897014" duration="26000" />
       <workItem from="1605175750148" duration="2980000" />
       <workItem from="1605197270937" duration="1337000" />
+      <workItem from="1605252047287" duration="1435000" />
+      <workItem from="1605274455876" duration="2077000" />
+      <workItem from="1605280493427" duration="26270000" />
     </task>
     <servers />
   </component>
@@ -133,14 +157,16 @@
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602231111412" />
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605128467975" />
-    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602071433877">
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605252311151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605252311151" />
     <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602071433877" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602144914018">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605294571197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602144914018" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605294571197" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1602230607974">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -150,15 +176,17 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602485374237" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602357603646" />
-    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1602072304442">
+    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1605252311735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605252311735" />
     <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602072304442" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605138857662">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605292596297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605252216649" />
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602085982096" />
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605138857662" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605292596297" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602011199864">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -167,25 +195,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1602137830065" />
-    <state x="312" y="-1106" width="1154" height="906" maximized="true" key="dock-window-1" timestamp="1602224432831">
-      <screen x="0" y="-1080" width="1920" height="1080" />
+    <state x="312" y="-1106" width="1154" height="906" maximized="true" key="dock-window-1" timestamp="1605294132556">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="312" y="-1106" width="1154" height="906" maximized="true" key="dock-window-1/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602224432831" />
     <state x="171" y="-14" width="1182" height="811" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602084318409" />
-    <state x="479" y="100" width="578" height="624" key="find.popup" timestamp="1602259008734">
+    <state x="479" y="100" width="578" height="624" key="find.popup" timestamp="1605295229375">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602142566581" />
-    <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1602259008734" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1602438318649">
+    <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605295229375" />
+    <state x="425" y="186" key="run.anything.popup" timestamp="1605316711293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230916178" />
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602438318649" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605166515372">
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605316711293" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605316528179">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605166515372" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605160435932" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605285012623" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605316528179" />
   </component>
 </project>
