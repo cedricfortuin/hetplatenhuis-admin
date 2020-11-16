@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
-        $sql = "SELECT USER_ID, USERNAME, USER_PASSWORD FROM users WHERE USERNAME = ?";
+        $sql = "SELECT ADMIN_ID, ADMIN_UUID, USERNAME, ADMIN_PASSWORD FROM admins WHERE USERNAME = ?";
 
         if ($stmt = mysqli_prepare($ConnectionLink, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if username exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $id, $uuid, $username, $hashed_password);
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
@@ -55,8 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Store data in session variables
                             // This creates cookies which make logging in and using the admin panel, working
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-
+                            $_SESSION["uuid"] = $uuid;
                             // Redirect user to welcome page
                             header("location: index.php");
                         } else {
@@ -93,7 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-all.min.css">
 </head>
-
 <body class="bg-gradient-primary">
 <div class="container">
     <div class="row justify-content-center">

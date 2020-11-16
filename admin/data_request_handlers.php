@@ -17,10 +17,10 @@ if (user_role === 'visitor' || user_role === 'subadmin')
 }
 
 // Admin requests
-$getAdminBySessionIdArray = $ConnectionLink->query("SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'")->fetch_array();
-$getAdminArray = $ConnectionLink->query("SELECT * FROM users")->fetch_array();
-$getAdminBySessionId = $ConnectionLink->query("SELECT * FROM users WHERE USER_ID ='" . $_SESSION['id'] . "'");
-$getAdminArrayDesc = $ConnectionLink->query("SELECT * FROM users ORDER BY USER_ID ASC");
+$getAdminBySessionIdArray = $ConnectionLink->query("SELECT * FROM admins WHERE ADMIN_UUID ='" . $_SESSION['uuid'] . "'")->fetch_array();
+$getAdminArray = $ConnectionLink->query("SELECT * FROM admins")->fetch_array();
+$getAdminBySessionId = $ConnectionLink->query("SELECT * FROM admins WHERE ADMIN_UUID ='" . $_SESSION['uuid'] . "'");
+$getAdminArrayDesc = $ConnectionLink->query("SELECT * FROM admins ORDER BY ADMIN_UUID");
 
 
 // Song requests

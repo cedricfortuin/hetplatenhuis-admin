@@ -21,6 +21,7 @@ define ('SMTP_USERNAME', 'info@hetplatenhuis.nl');
 define ('SMTP_PASSWORD', 'H@2Plat3nHu1s');
 
 // Database tables
+define ('table_admins', 'admins');
 define ('table_users', 'users');
 define ('table_sotd', 'songofday');
 define ('table_collection', 'collection');
@@ -32,8 +33,21 @@ define ('table_discography', 'discography');
 define ('table_mail_settings', 'mail_settings');
 
 // Users table
+define ('admin_id', 'ADMIN_ID');
+define ('admin_uuid', 'ADMIN_UUID');
+define ('admin_username', 'USERNAME');
+define ('admin_role', 'ADMIN_ROLE');
+define ('admin_mail', 'ADMIN_EMAIL');
+define ('admin_firstname', 'ADMIN_FIRSTNAME');
+define ('admin_lastname', 'ADMIN_LASTNAME');
+define ('admin_password', 'ADMIN_PASSWORD');
+define ('admin_created_at', 'ADMIN_CREATED_AT');
+define ('admin_image', 'ADMIN_IMAGE');
+
+// Users table
 define ('user_id', 'USER_ID');
-define ('username', 'USERNAME');
+define ('user_uuid', 'USER_UUID');
+define ('user_username', 'USERNAME');
 define ('user_role', 'USER_ROLE');
 define ('user_mail', 'USER_EMAIL');
 define ('user_firstname', 'USER_FIRSTNAME');

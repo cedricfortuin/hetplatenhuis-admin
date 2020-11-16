@@ -5,36 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/_layouts/_layout-navbar.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/controllers/getConfigValueByKeyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/data_request_handlers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/_layouts/_layout-songofday-list.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/pf-banner-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/mails/new-admin-mail/new-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hetplatenhuis-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hetplatenhuis-admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-footer.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-userlayout.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/_layouts/permissions_layout.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/add_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add_new_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_new_mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/album_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/album_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/collect_all_datahandlers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_artists.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/database_strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/mail_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/mail_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/constants.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/current_admins_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_admins_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/current_artists_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_artists_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data_request_handlers.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data_request_handlers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/delete_admin_handler.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/edit_admin_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_admin_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_artist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/edit_own_profile_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_own_profile_page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/models/define_variables.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/add-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/add-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/facebook2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/images/facebook2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/instagram2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/images/instagram2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/vinyl-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/vinyl-close.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/password/reset_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/password/reset_mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/songofday_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/update_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hetplatenhuis/website/_layouts/_layout-contactbuttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hetplatenhuis/website/_layouts/_layout-contactbuttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hetplatenhuis/website/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/../hetplatenhuis/website/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hetplatenhuis/website/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../hetplatenhuis/website/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="PHTML File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -70,7 +70,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iSypZ6BSsLKArgc7fF18mBYYh5" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -91,6 +91,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\mails\old-admin-mail" />
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\mails" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\composetest" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\password" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin" />
@@ -135,6 +137,7 @@
       <workItem from="1605252047287" duration="1435000" />
       <workItem from="1605274455876" duration="2077000" />
       <workItem from="1605280493427" duration="26270000" />
+      <workItem from="1605364165702" duration="7751000" />
     </task>
     <servers />
   </component>
@@ -152,11 +155,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="292" key="#Composer/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230518307" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605128467975">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605363095015">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602231111412" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605128467975" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605363095015" />
     <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605252311151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -205,15 +208,15 @@
     </state>
     <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602142566581" />
     <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605295229375" />
-    <state x="425" y="186" key="run.anything.popup" timestamp="1605316711293">
+    <state x="425" y="186" key="run.anything.popup" timestamp="1605356104764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230916178" />
-    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605316711293" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605316528179">
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605356104764" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605438800436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605285012623" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605316528179" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605438800436" />
   </component>
 </project>

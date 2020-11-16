@@ -2,13 +2,7 @@
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-//include 'collect_all_datahandlers.php';
-include '_layouts/_layout-nopage.phtml';
-
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
+include '_layouts/_layout-header.phtml';
 
 $artist_name = $title = $uuid = $about = $history = $follow = $date = '';
 $artist_name_err = $about_err = $history_err = $follow_err = $img_err = '';
@@ -74,7 +68,7 @@ if (isset($_REQUEST['addData'])) {
             if (mysqli_query($ConnectionLink, $query)) {
                 // Upload file
                 move_uploaded_file($_FILES['file']['tmp_name'], $target_dir . $name);
-                echo "<script>window.location.href = 'add_artists.php'</script>";
+                echo "<script>window.location.href = 'current_artists_page.php'</script>";
             } else {
                 echo "Error";
             }
@@ -110,7 +104,7 @@ if (isset($_REQUEST['addData'])) {
 
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFileInput" aria-describedby="customFileInput" name="file">
-                                <label class="custom-file-label" for="customFileInput">Select file <i class="fas fa-file-import"></i></label>
+                                <label class="custom-file-label" for="customFileInput">Banner uploaden</label>
                             </div>
                             <hr/>
                             <div class="form-group text-center mt-2">

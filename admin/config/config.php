@@ -4,10 +4,10 @@
  */
 include 'constants.php';
 //This ConnectionLink is for the database from Het Platenhuis
-$ConnectionLink = mysqli_connect(external_host, external_user, external_password, external_db);
+//$ConnectionLink = mysqli_connect(external_host, external_user, external_password, external_db);
 
 //This ConnectionLink is for the local host
-//$ConnectionLink = mysqli_connect(local_host, local_user, local_password, local_db);
+$ConnectionLink = mysqli_connect(local_host, local_user, local_password, local_db);
 
 // Get file from url
 $basename = basename($_SERVER['PHP_SELF'], ".php");

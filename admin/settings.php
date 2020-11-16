@@ -198,9 +198,20 @@ if (isset($_POST['updateEnv'])) {
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <h5 class="card-header">Database</h5>
+                        <div class="card-body">
+                            <div class="form">
+                                <a href="#">Download de database</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>
 </div>
-
 <?php include '_layouts/_layout-footer.phtml';?>

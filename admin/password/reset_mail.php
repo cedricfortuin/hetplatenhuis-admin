@@ -1,3 +1,6 @@
+<?php
+include '../config/config.php';
+?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -11,7 +14,6 @@
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
 </head>
-
 <body class="bg-gradient-primary">
 <div class="container">
     <div class="row justify-content-center">
@@ -23,19 +25,13 @@
                             <div class="p-5">
                                 <div class="login-form">
                                     <?php
-                                    include '../config/config.php';
                                     $showTooShortError = false;
                                     $showNotTheSameError = false;
-
-                                    if (!empty($_GET['token']) && !empty($_GET['email'])) {
-
-                                        $userEmail = $_GET['email'];
-                                        $userToken = $_GET['token'];
-                                        $sql = mysqli_query($ConnectionLink,"SELECT * FROM reset_password WHERE USER_TOKEN_MAIL = '$userEmail'");
-                                        $getResult = mysqli_fetch_array($sql);
-                                        $mail_from_database = $getResult['USER_TOKEN_MAIL'];
-                                        $token_from_database = $getResult['USER_TOKEN'];
-                                        if ($mail_from_database === $userEmail && $token_from_database  === $userToken) {
+                                    $userUuid = $_GET['uuid'];
+                                    $userToken = $_GET['token'];
+                                    $sql = $ConnectionLink->query("SELECT * FROM admins WHERE ADMIN_UUID = '$userUuid'")->fetch_array();
+                                    if (!empty($_GET['token']) && !empty($_GET['uuid'])) {
+                                        if ($sql['ADMIN_UUID'] === $userUuid && $sql['ADMIN_RESET_TOKEN'] === $userToken) {
                                             ?>
                                             <form action="" method="post">
                                                 <h4 class="modal-title text-center">Stel hier je (nieuwe) wachtwoord in!</h4><br/>
@@ -61,14 +57,12 @@
                                                 if ($setPassword === $setConfirmPassword) {
                                                     if (strlen(trim($setPassword)) >= 8 && !empty($setPassword)) {
                                                         $hashedPassword = password_hash($setPassword, PASSWORD_BCRYPT);
-                                                        $insertSql = $ConnectionLink->query("UPDATE users SET USER_PASSWORD = '$hashedPassword' WHERE USER_EMAIL = '$userEmail'");
-                                                        $deleteSql = $ConnectionLink->query("DELETE FROM reset_password WHERE USER_TOKEN_MAIL = '$userEmail'");
-
-                                                        if (mysqli_query($ConnectionLink, $insertSql, $deleteSql)) {
+                                                        $updateAdminData = $ConnectionLink->query("UPDATE admins SET ADMIN_PASSWORD = '$hashedPassword', ADMIN_RESET_TOKEN = null WHERE ADMIN_UUID = '$userUuid'");
+                                                        if (mysqli_query($ConnectionLink, $updateAdminData)) {
                                                             session_start();
                                                             $_SESSION["loggedin"] = true;
-
-                                                            echo "<script>window.location.href='../login.php'</script>";
+                                                            $_SESSION["uuid"] = $userUuid;
+                                                            header("location: ../index.php");
                                                         } else {
                                                             echo "<script>window.location.href='../login.php'</script>";
                                                         }
@@ -83,9 +77,8 @@
                                                 }
                                             }
                                         } else {
-                                            echo 'Error';
+                                            echo '<p class="alert alert-danger">Er is een fout opgetreden. Probeer het opnieuw.</p>';
                                         }
-
                                     }?>
                                 </div>
                             </div>

@@ -15,11 +15,11 @@ $updateTimestamp = strtotime($getUpdateArrayDesc[update_created_at])
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                 <h3 class="text-dark mb-0">Dashboard</h3>
                             </div>
-                            <p><?php echo "Welkom " . $getAdminBySessionIdArray[user_firstname]; ?> bij het admin-paneel. Hier kun je
-                                als <?php echo $getAdminBySessionIdArray[user_role]?> het volgende doen: </p>
+                            <p><?php echo "Welkom " . $getAdminBySessionIdArray[admin_firstname]; ?> bij het admin-paneel. Hier kun je
+                                als <?php echo $getAdminBySessionIdArray[admin_role]?> het volgende doen: </p>
                             <ul>
                                 <?php
-                                switch ($getAdminBySessionIdArray[user_role])
+                                switch ($getAdminBySessionIdArray[admin_role])
                                 {
                                     case ('admin'):
                                         ?>

@@ -32,34 +32,34 @@
                                             <h3 class="text-dark mb-0">Je profiel aanpassen</h3>
                                         </div>
                                         <div>
-                                            <p><?php echo 'Hoi ' . $getAdminBySessionIdArray[user_firstname] . ', je kunt hier je profiel aanpassen'?></p>
+                                            <p><?php echo 'Hoi ' . $getAdminBySessionIdArray[admin_firstname] . ', je kunt hier je profiel aanpassen'?></p>
                                         </div>
                                         <form action="" method="post">
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label for="firstname">Voornaam</label>
-                                                    <input id="firstname" type="text" name="firstname-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[user_firstname] ?>" required>
+                                                    <input id="firstname" type="text" name="firstname-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[admin_firstname] ?>" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="lastname">Achternaam</label>
-                                                    <input id="lastname" type="text" name="lastname-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[user_lastname] ?>" required>
+                                                    <input id="lastname" type="text" name="lastname-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[admin_lastname] ?>" required>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label for="username">Gebruikersnaam</label>
-                                                    <input id="username" type="text" name="username-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[username] ?>" required>
+                                                    <input id="username" type="text" name="username-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[admin_username] ?>" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="email">Email</label>
-                                                    <input id="email" type="text" name="email-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[user_mail] ?>" required>
+                                                    <input id="email" type="text" name="email-edit" autocomplete="off" class="form-control" value="<?php echo $getAdminBySessionIdArray[admin_mail] ?>" required>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="form-group">
                                                 <input type="submit" class="btn btn-outline-primary" value="Je profiel bewerken" name="editOwnProfile">
                                             </div>
-                                            <p><i>Helaas kun je niet je eigen wachtwoord aanpassen</i></p>
+                                            <p><i>Helaas kun je je eigen wachtwoord nog niet aanpassen.</i></p>
                                         </form>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ if(isset($_POST['editOwnProfile']))
     $email = mysqli_real_escape_string($ConnectionLink, $_POST['email-edit']);
 
     // Attempt insert query execution
-    $sql = "UPDATE users SET USERNAME =  '".$username."' , USER_FIRSTNAME = '".$first_name."', USER_LASTNAME = '".$last_name."', USER_EMAIL = '".$email."'  WHERE USER_ID = '". $_SESSION['id'] ."'";
+    $sql = "UPDATE admins SET USERNAME =  '".$username."' , ADMIN_FIRSTNAME = '".$first_name."', ADMIN_LASTNAME = '".$last_name."', ADMIN_EMAIL = '".$email."'  WHERE ADMIN_ID = '". $_SESSION['id'] ."'";
     if (mysqli_query($ConnectionLink, $sql)) {
         echo "<script>window.location.href='edit_own_profile_page.php?SHOW_ALERT=ON_EDIT'</script>";
     } else {

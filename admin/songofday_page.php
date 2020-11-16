@@ -46,7 +46,7 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                     }
                 }
                 if ($isDisabledForVisitors){
-                    echo '<div><p class="alert alert-warning text-center alert-dismissible fade show">Je mag helaas de nummers niet verwijderen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
+                    echo '<div><p crelass="alert alert-warning text-center alert-dismissible fade show">Je mag helaas de nummers niet verwijderen.<button type="button" class="close" data-dismiss="alert"><i class="fas fa-times"></i></button></p></div>';
                 }
                 ?>
                 <div class="row">
@@ -57,28 +57,7 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table" style="color: black;">
-                                <tr>
-                                    <th>Nummer</th>
-                                    <th>Band/artiest</th>
-                                    <th>Upload datum</th>
-                                    <th></th>
-                                </tr>
-                                <?php while ($getSongForTable = $result->fetch_assoc()): ?>
-                                    <tr>
-                                        <td><?php echo $getSongForTable['SONG_NAME']; ?></td>
-                                        <td><?php echo $getSongForTable['SONG_ARTIST']; ?></td>
-                                        <td><?php echo $getSongForTable['UPLOAD_DATE']; ?></td>
-                                        <?php
-                                        if (!$isDisabledForVisitors)
-                                        { ?>
-                                            <td><a href="delete-song.php?SONG_ID=<?php echo $getSongForTable["SONG_ID"] ?>"><i class="fa fa-trash fa-fw"></i></a></td>
-                                        <?php }
-
-                                        ?>
-                                    </tr>
-                                <?php endwhile; ?>
-                            </table>
+                            <?php include '_layouts/_layout-songofday-list.phtml';?>
                         </div>
                     </div>
                 </div>
