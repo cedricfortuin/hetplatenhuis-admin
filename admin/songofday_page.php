@@ -53,7 +53,7 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM songofday ORDER BY SONG_ID D
                     <div class="col-md-12">
                         <div class="form-row col-6 text-center">
                             <div class="form-group justify-content-end">
-                                <p>Aantal nummers van de dag: <?php echo $total_pages?> nummers.</p>
+                                <p>Aantal nummers van de dag: <?php echo $total_pages?> nummers</p>
                             </div>
                         </div>
                         <div class="table-responsive">
