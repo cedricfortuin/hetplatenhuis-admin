@@ -5,8 +5,8 @@
 
 //These strings are for the external database
 define ('EXTERNAL_HOST', 'hetplatenhuis.nl:3306');
-define('EXTERNAL_USER', 'DatabaseLogin-Platenhuis');
-define('EXTERNAL_PASSWORD', 'Du2wfBtfqUq00FZgso8C');
+define('EXTERNAL_USER', 'DB-platenhuis');
+define('EXTERNAL_PASSWORD', 'b6p&0slF&&Ht');
 define('EXTERNAL_DATABASE', 'DATABASE_PLATENHUIS');
 
 //These strings are for the local database
