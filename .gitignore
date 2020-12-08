@@ -1,6 +1,17 @@
 
+.idea/workspace.xml
 *.xml
 *.xml
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/hetplatenhuis.iml
+*.xml
+*.iml
+.idea/workspace.xml
+.idea/hetplatenhuis.iml
+.idea/modules.xml
+.idea/vcs.xml
 .idea/workspace.xml
 .idea/dataSources/f50d4a62-b976-4bf9-a65a-8fbfc91654b9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
 .idea/dataSources/3a39cc02-b2e7-4faa-9ed1-3f11cb3aec6b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
