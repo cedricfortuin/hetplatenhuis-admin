@@ -143,8 +143,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </div>
                                         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
                                         <div class="text-sm-center"><br>
-                                            <a href="mailto:administrator@hetplatenhuis.nl">Wachtwoord vergeten?</a><br/>
-                                            <small>Let op, we zetten <i class="fas fa-cookie"></i> neer om je te kunnen inloggen!<br/>Door in te loggen ga je hiermee akkoord.</small>
+                                            <a href="mailto:administrator@hetplatenhuis.nl">Wachtwoord
+                                                vergeten?</a><br/>
+                                            <small>Let op, we zetten <i class="fas fa-cookie"></i> neer om je te kunnen
+                                                inloggen!<br/>Door in te loggen ga je hiermee akkoord.</small>
                                         </div>
                                         <br>
                                         <p class="help-block text-center"
