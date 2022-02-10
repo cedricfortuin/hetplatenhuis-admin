@@ -1,21 +1,10 @@
 <?php
+include '_layouts/_layout-header.phtml';
 // Initialize the session
 
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
-
-session_start();
-include 'config/config.php';
-$new_sql = mysqli_query($ConnectionLink,  "SELECT * FROM users WHERE USER_ID ='". $_SESSION['id'] ."'");
-$username = mysqli_fetch_array($new_sql);
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-
 $UPDATE_SUCCESS = false;
 if (isset($_GET['UPDATE_SUCCESS']))
 {
@@ -40,7 +29,7 @@ if (isset($_GET['DELETE_SUCCESS']))
 
 
 
-if($username['USER_ROLE'] === 'visitor')
+if($getAdminBySessionIdArray['USER_ROLE'] === 'visitor')
 {
     $disabled = 'disabled';
 } else {
@@ -53,9 +42,8 @@ $num_results_on_page = 4;
 // Check if the page number is specified and check if it's a number, if not return the default page number which is 1.
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
-include '_layouts/_layout-header.phtml';
 
-if ($stmt = $ConnectionLink->prepare('SELECT * FROM collection ORDER BY RECORD_ID DESC LIMIT ?,?')) {
+if ($stmt = $ConnectionLink->prepare('SELECT * FROM collection ORDER BY RECORD_ID  DESC LIMIT ?,?')) {
     // Calculate the page to get the results we need from our table.
     $calc_page = ($page - 1) * $num_results_on_page;
     $stmt->bind_param('ii', $calc_page, $num_results_on_page);
@@ -114,10 +102,10 @@ if ($stmt = $ConnectionLink->prepare('SELECT * FROM collection ORDER BY RECORD_I
                                         <td><?php echo $row['RECORD_ARTIST']; ?></td>
                                         <td><?php echo $row['RECORD_OWNER']; ?></td>
                                         <?php
-                                        if ($username['USER_ROLE'] !== 'visitor')
+                                        if ($getAdminBySessionIdArray['USER_ROLE'] !== 'visitor')
                                         { ?>
                                             <td><a
-                                                    href="delete_record.php?RECORD_ID=<?php echo $row["RECORD_ID"] ?>">Verwijderen</a>
+                                                    href="delete_record.php?RECORD_ID=<?php echo $row["RECORD_ID"] ?>"><i class="fa fa-trash fa-fw"></i></a>
                                             </td>
                                         <?php }
                                         ?>

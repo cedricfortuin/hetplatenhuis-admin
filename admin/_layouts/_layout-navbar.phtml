@@ -1,0 +1,61 @@
+<nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+    <div class="container-fluid d-flex flex-column p-0">
+        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="index.php">
+            <div class="sidebar-brand-icon"><i class="fas fa-user-astronaut"></i></div>
+            <div class="sidebar-brand-text mx-3"><span>Het Platenhuis</span></div>
+        </a>
+        <hr class="sidebar-divider my-0">
+        <?php
+        ?>
+        <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation"><a class="nav-link <?php echo ($basename == 'index') ? 'active':''; ?>" href="./index.php"><i
+                        class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+
+            <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-music"></i><span>Muziek</span></a>
+                <div class="dropdown-menu mr-0" aria-labelledby="dropdownMenuMusic">
+                    <h6 class="dropdown-header"><i class="fas fa-music"></i> Muziek</h6>
+                    <a class="dropdown-item <?php echo ($basename == 'songofday_page') ? 'active':''; ?>" href="./songofday_page.php">Nummer van de dag</a>
+                    <a class="dropdown-item <?php echo ($basename == 'current_artists_page') ? 'active':''; ?>" href="./current_artists_page.php">Huidige artiesten</a>
+                    <a class="dropdown-item <?php echo ($basename == 'add_artists') ? 'active':''; ?>" href="./add_artists.php">Artiest toevoegen</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-users"></i><span>Profielen</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                    <h6 class="dropdown-header"><i class="fas fa-users"></i> Profielen</h6>
+                    <a class="dropdown-item" href="#">Statistieken</a>
+                    <a class="dropdown-item" href="#">Alle gebruikers</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-lock"></i><span>Admins</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                    <h6 class="dropdown-header"><i class="fas fa-users"></i> Admins</h6>
+                    <a class="dropdown-item <?php echo ($basename == 'current_admins_page') ? 'active':''; ?>" href="./current_admins_page.php">Huidige admins</a>
+                    <a class="dropdown-item <?php echo ($basename == 'add_admin') ? 'active':''; ?>" href="./add_admin.php">Admin toevoegen</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-share-square"></i><span>Sociaal</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                    <h6 class="dropdown-header"><i class="fas fa-share-square"></i> Sociaal</h6>
+                    <a class="dropdown-item <?php echo ($basename == 'update_page') ? 'active':''; ?>" href="./update_page.php">Updates</a>
+                    <a class="dropdown-item <?php echo ($basename == 'add_new_mail') ? 'active':''; ?>" href="./add_new_mail.php">Mail</a>
+                    <a class="dropdown-item disabled" href="#">Webshop</a>
+                </div>
+            </li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="./logout.php"><i
+                        class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+
+            <li class="nav-item" role="presentation"><a class="nav-link" href="https://hetplatenhuis.nl/"><i
+                        class="fas fa-bars"></i><span>Naar de site</span></a></li>
+        </ul>
+        <div class="text-center d-none d-md-inline">
+            <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+        </div>
+    </div>
+</nav>

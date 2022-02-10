@@ -1,21 +1,11 @@
 <?php
 // Initialize the session
-
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
 
-session_start();
-
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: index.php");
-    exit;
-}
-
 // Include config file from the root directory
-require_once "config/config.php";
-
+include "config/config.php";
 // Set the variables to empty
 $password = $username = "";
 $password_err = $username_err = "";
@@ -25,14 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if username (firstname) is empty
     if (empty(trim($_POST["username"]))) {
-        $username_err = "<div class='alert alert-warning text-center'><i class='fa fa-exclamation fa-fw'></i> Vul je gebruikersnaam in.</div>";
+        $username_err = "Vul je gebruikersnaam in.";
     } else {
         $username = trim($_POST["username"]);
     }
 
     // Check if password is empty
     if (empty(trim($_POST["password"]))) {
-        $password_err = "<div class='alert alert-warning text-center'><i class='fa fa-exclamation fa-fw'></i> Vul je wachtwoord in.</div>";
+        $password_err = "Vul je wachtwoord in.";
     } else {
         $password = trim($_POST["password"]);
     }
@@ -40,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
-        $sql = "SELECT USER_ID, USERNAME, USER_PASSWORD FROM users WHERE USERNAME = ?";
+        $sql = "SELECT ADMIN_ID, ADMIN_UUID, USERNAME, ADMIN_PASSWORD FROM admins WHERE USERNAME = ?";
 
         if ($stmt = mysqli_prepare($ConnectionLink, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -57,32 +47,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if username exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $id, $uuid, $username, $hashed_password);
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
                             session_start();
-
                             // Store data in session variables
                             // This creates cookies which make logging in and using the admin panel, working
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-                            $_SESSION['loggedin_time'] = time();
-
-                            $addOnline = "UPDATE users SET USER_LAST_ONLINE = 'true' WHERE USERNAME = '" . $username . "'";
-                            mysqli_query($ConnectionLink, $addOnline);
-
+                            $_SESSION["uuid"] = $uuid;
                             // Redirect user to welcome page
                             header("location: index.php");
                         } else {
                             // Display an error message if password is not valid
-                            $password_err = "<div class='alert alert-danger text-center'><i class='fa fa-exclamation-triangle fa-fw'></i> Gebruikersnaam of wachtwoord niet correct.</div>";
+                            $password_err = "Wachtwoord incorrect.";
                         }
                     }
                 } else {
                     // Display an error message if username doesn't exist
-                    $username_err = "<div class='alert alert-danger text-center'><i class='fa fa-exclamation-triangle fa-fw'></i> Gebruikersnaam of wachtwoord niet correct.</div>";
+                    $username_err = "Gebruikersnaam incorrect.";
                 }
             } else {
                 echo "<div class='alert alert-danger text-center'>Oops! Something went wrong. Please try again later. O_o</div>";
@@ -92,9 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_stmt_close($stmt);
         }
     }
-
     // Close connection
-    mysqli_close($ConnectionLink);
+    $ConnectionLink->close();
 }
 ?>
 <!DOCTYPE html>
@@ -110,7 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-all.min.css">
 </head>
-
 <body class="bg-gradient-primary">
 <div class="container">
     <div class="row justify-content-center">
@@ -130,16 +111,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class="login-form">
                                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                                         <h4 class="modal-title text-center">Login met je admin account</h4><br/>
-                                        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                                        <div class="form-group">
                                             <label for="email-label">Gebruikersnaam</label>
-                                            <input id="email-label" type="text" name="username" class="form-control"
-                                                   placeholder="" autocomplete="off">
+                                            <input id="email-label" type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                                                   placeholder="" autocomplete="off" value="<?php echo (isset($username)) ? $username : ''?>">
+                                            <p class="invalid-feedback"><?php echo $username_err?></p>
                                         </div>
-                                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                                        <div class="form-group">
                                             <label for="password-label">Wachtwoord</label>
                                             <input id="password-label" type="password" name="password"
-                                                   class="form-control"
+                                                   class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
                                                    placeholder="" autocomplete="off">
+                                            <p class="invalid-feedback"><?php echo $password_err?></p>
                                         </div>
                                         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
                                         <div class="text-sm-center"><br>
@@ -149,10 +132,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                 inloggen!<br/>Door in te loggen ga je hiermee akkoord.</small>
                                         </div>
                                         <br>
-                                        <p class="help-block text-center"
-                                           style="color:red;"><?php echo $username_err; ?></p>
-                                        <p class="help-block text-center"
-                                           style="color:red;"><?php echo $password_err; ?></p>
                                         <h6 class="text-center">Geen admin? <a href="https://hetplatenhuis.nl">Terug
                                                 naar de site</a>
                                     </form>

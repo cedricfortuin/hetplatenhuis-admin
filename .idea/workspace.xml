@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="abc0c874-9b4e-4b21-8c37-d52ee0ce9a85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f50d4a62-b976-4bf9-a65a-8fbfc91654b9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/_layouts/_layout-songofday-list.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/img/pf-banner-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/mails/new-admin-mail/new-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hetplatenhuis-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hetplatenhuis-admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/_layouts/_layout-header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/add_artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_artists.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/database_strings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/database_strings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/register_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/current_admins_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/current_admins_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data_request_handlers.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data_request_handlers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/delete_admin_handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_admin_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_admin_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_own_profile_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_own_profile_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/add-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/add-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/facebook2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/images/facebook2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/instagram2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/images/instagram2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mails/images/vinyl-close.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/mails/old-admin-mail/vinyl-close.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/password/reset_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/password/reset_mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/songofday_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/songofday_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hetplatenhuis/website/_layouts/_layout-contactbuttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/../hetplatenhuis/website/_layouts/_layout-contactbuttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hetplatenhuis/website/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/../hetplatenhuis/website/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hetplatenhuis/website/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../hetplatenhuis/website/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +50,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="PHTML File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -41,7 +70,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iSypZ6BSsLKArgc7fF18mBYYh5" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -55,13 +84,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP&#10;Cookie&#10;JavaScript" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/ProjectPim" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\mails\old-admin-mail" />
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\mails" />
+      <recent name="C:\xampp\htdocs\hetplatenhuis-admin\composetest" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin\password" />
       <recent name="C:\xampp\htdocs\hetplatenhuis-admin\admin" />
     </key>
@@ -98,7 +130,14 @@
       <workItem from="1604313100971" duration="20000" />
       <workItem from="1604943384108" duration="92000" />
       <workItem from="1604948009231" duration="1205000" />
-      <workItem from="1605123017300" duration="81000" />
+      <workItem from="1605123017300" duration="19251000" />
+      <workItem from="1605174897014" duration="26000" />
+      <workItem from="1605175750148" duration="2980000" />
+      <workItem from="1605197270937" duration="1337000" />
+      <workItem from="1605252047287" duration="1435000" />
+      <workItem from="1605274455876" duration="2077000" />
+      <workItem from="1605280493427" duration="26270000" />
+      <workItem from="1605364165702" duration="7751000" />
     </task>
     <servers />
   </component>
@@ -116,19 +155,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="292" key="#Composer/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230518307" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602231111412">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605363095015">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602231111412" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602101605156" />
-    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602071433877">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605363095015" />
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605252311151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605252311151" />
     <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602071433877" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602144914018">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605294571197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602144914018" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605294571197" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1602230607974">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -138,15 +179,17 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602485374237" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602357603646" />
-    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1602072304442">
+    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1605252311735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605252311735" />
     <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602072304442" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602221981845">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1605292596297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605252216649" />
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602085982096" />
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602221981845" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605292596297" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602011199864">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -155,24 +198,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1602137830065" />
-    <state x="312" y="-1106" width="1154" height="906" maximized="true" key="dock-window-1" timestamp="1602224432831">
-      <screen x="0" y="-1080" width="1920" height="1080" />
+    <state x="312" y="-1106" width="1154" height="906" maximized="true" key="dock-window-1" timestamp="1605294132556">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="312" y="-1106" width="1154" height="906" maximized="true" key="dock-window-1/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602224432831" />
     <state x="171" y="-14" width="1182" height="811" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602084318409" />
-    <state x="479" y="100" width="578" height="624" key="find.popup" timestamp="1602259008734">
+    <state x="479" y="100" width="578" height="624" key="find.popup" timestamp="1605295229375">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824/1920.0.1920.1080@0.0.1536.824" timestamp="1602142566581" />
-    <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1602259008734" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1602438318649">
+    <state x="479" y="100" width="578" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605295229375" />
+    <state x="425" y="186" key="run.anything.popup" timestamp="1605356104764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1602230916178" />
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602438318649" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602258991343">
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605356104764" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605438800436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602258991343" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1080@0.0.1536.824" timestamp="1605285012623" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605438800436" />
   </component>
 </project>

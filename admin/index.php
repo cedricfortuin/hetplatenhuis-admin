@@ -1,19 +1,11 @@
 <?php
-// Initialize the session
-
 /*
  * Copyright © 2020 bij Het Platenhuis en Cedric Fortuin. Niks uit deze website mag zonder toestemming gebruikt, gekopieerd en/of verwijderd worden. Als je de website gebruikt ga je akkoord met onze gebruiksvoorwaarden en privacy.
  */
 
-session_start();
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-
-// Check if the user is logged in, if not then redirect him to login page
 include '_layouts/_layout-header.phtml';
-include 'collect_all_datahandlers.php';
+$songTimestamp = strtotime($getSongArrayDesc[song_upload_date]);
+$updateTimestamp = strtotime($getUpdateArrayDesc[update_created_at])
 ?>
         <div class="container-fluid">
             <section class="content-section" style="color: black;">
@@ -23,11 +15,11 @@ include 'collect_all_datahandlers.php';
                             <div class="d-sm-flex justify-content-between align-items-center mb-4">
                                 <h3 class="text-dark mb-0">Dashboard</h3>
                             </div>
-                            <p><?php echo "Welkom " . userFirstname; ?> bij het admin-paneel. Hier kun je
-                                als <?php echo userRole?> het volgende doen: </p>
+                            <p><?php echo "Welkom " . $getAdminBySessionIdArray[admin_firstname]; ?> bij het admin-paneel. Hier kun je
+                                als <?php echo $getAdminBySessionIdArray[admin_role]?> het volgende doen: </p>
                             <ul>
                                 <?php
-                                switch (userRole)
+                                switch ($getAdminBySessionIdArray[admin_role])
                                 {
                                     case ('admin'):
                                         ?>
@@ -49,17 +41,17 @@ include 'collect_all_datahandlers.php';
                                     <?php
                                 }
                                 ?>
-
                             </ul>
                         </div>
                     </div>
                     <br><br>
                     <div class="row">
                         <div class="col-md-4">
-                            <?php echo spotifyLinkDesc ?>
+                            <?php echo $getSongArrayDesc[spotify_link] ?>
                         </div>
                         <div class="row mx-auto">
-                            <div class="col-lg-12 text-right">
+                            <div class="col-md-2"></div>
+                            <div class="col-lg-10 text-right">
                                 <p>Het laatste nummer van de dag. <a href="songofday_page.php"><i>Naar pagina</i></a></p>
                                 <table class="table table-borderless" style="color: black">
                                     <tr>
@@ -68,13 +60,14 @@ include 'collect_all_datahandlers.php';
                                     </tr>
                                     <tbody>
                                     <tr>
-                                        <td scope="row"><?php echo songNameDesc ?></td>
-                                        <td scope="row"><?php echo songAddedAtDesc ?></td>
+                                        <td scope="row"><?php echo $getSongArrayDesc[song_name] ?></td>
+                                        <td scope="row"><?php echo date('H:i d/m/Y', $songTimestamp) ?></td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-lg-12 text-right">
+                            <div class="col-md-2"></div>
+                            <div class="col-lg-10 text-right">
                                 <p>De laatste update op de website. <a href="update_page.php"><i>Naar pagina</i></a></p>
                                 <table class="table table-borderless" style="color:black">
                                     <tr>
@@ -83,8 +76,8 @@ include 'collect_all_datahandlers.php';
                                     </tr>
                                     <tbody style="color: black;">
                                     <tr>
-                                        <td><?php echo updateTitleDesc; ?></td>
-                                        <td><?php echo updateAddedAtDesc; ?></td>
+                                        <td><?php echo $getUpdateArrayDesc[update_title]; ?></td>
+                                        <td><?php echo date('H:i d/m/Y', $updateTimestamp); ?></td>
                                     </tr>
                                     </tbody>
                                 </table>

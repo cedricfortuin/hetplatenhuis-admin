@@ -1,0 +1,24 @@
+<table class="table" style="color: black;">
+    <tr>
+        <th>Nummer</th>
+        <th>Band/artiest</th>
+        <th>Upload datum</th>
+        <th></th>
+    </tr>
+    <?php while ($getSongForTable = $result->fetch_assoc()):
+            $timestamp = strtotime($getSongForTable['UPLOAD_DATE']);
+        ?>
+        <tr>
+            <td><?php echo $getSongForTable['SONG_NAME']; ?></td>
+            <td><?php echo $getSongForTable['SONG_ARTIST']; ?></td>
+            <td><?php echo date('H:i d/m/Y', $timestamp); ?></td>
+            <?php
+            if (!$isDisabledForVisitors)
+            { ?>
+                <td><a href="delete-song.php?SONG_ID=<?php echo $getSongForTable["SONG_ID"] ?>"><i class="fa fa-trash fa-fw"></i></a></td>
+            <?php }
+
+            ?>
+        </tr>
+    <?php endwhile; ?>
+</table>

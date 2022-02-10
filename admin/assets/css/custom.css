@@ -12,3 +12,11 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg);
+}
+/*for animation*/
+.dropdown-toggle:after {
+    transition: 0.7s;
+}

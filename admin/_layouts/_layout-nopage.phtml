@@ -17,6 +17,7 @@ $getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE
               href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
         <link rel="stylesheet" href="./assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/css/custom.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             function startTime() {
                 let today = new Date();
@@ -53,38 +54,54 @@ $getValue = mysqli_fetch_array($ConnectionLink->query("SELECT * FROM users WHERE
             <hr class="sidebar-divider my-0">
             <ul class="nav navbar-nav text-light" id="accordionSidebar">
                 <li class="nav-item" role="presentation"><a class="nav-link" href="./index.php"><i
-                            class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                                class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./songofday_page.php">
-                        <i class="fab fa-spotify"></i><span>Nummer van de Dag</span></a></li>
+                <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-music"></i><span>Muziek</span></a>
+                    <div class="dropdown-menu mr-0" aria-labelledby="dropdownMenuMusic">
+                        <h6 class="dropdown-header"><i class="fas fa-music"></i> Muziek</h6>
+                        <a class="dropdown-item" href="./songofday_page.php">Nummer van de dag</a>
+                        <a class="dropdown-item" href="./current_artists_page.php">Huidige artiesten</a>
+                        <a class="dropdown-item" href="./add_artists.php">Artiest toevoegen</a>
+                    </div>
+                </li>
 
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./update_page.php"><i
-                            class="far fa-edit"></i><span>Updates</span></a></li>
-
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./current_admins_page.php"><i
-                            class="fas fa-user"></i><span>Profielen</span></a></li>
-
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./add_admin.php"><i
-                            class="fas fa-user-edit"></i><span>Toevoegen</span></a></li>
-
-
-                <li class="nav-item" role="presentation"><a class="nav-link disabled" href="./inbox_page.php"><i
-                                class="fas fa-mail-bulk"></i><span>Inbox</span></a></li>
-
-                <li class="nav-item" role="presentation"><a class="nav-link" href="./add_new_mail.php"><i
-                            class="fas fa-paper-plane"></i><span>Mail versturen</span></a></li>
+                <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-users"></i><span>Profielen</span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                        <h6 class="dropdown-header"><i class="fas fa-users"></i> Profielen</h6>
+                        <a class="dropdown-item" href="#">Statistieken</a>
+                        <a class="dropdown-item" href="#">Alle gebruikers</a>
+                    </div>
+                </li>
 
 
-                <li class="nav-item" role="presentation"><a class="nav-link disabled" href="#"><i
-                                class="fas fa-tags"></i><span>Webshop</span></a></li>
+                <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-lock"></i><span>Admins</span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                        <h6 class="dropdown-header"><i class="fas fa-users"></i> Admins</h6>
+                        <a class="dropdown-item" href="./current_admins_page.php">Huidige admins</a>
+                        <a class="dropdown-item" href="./add_admin.php">Admin toevoegen</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown show" role="presentation"><a class="nav-link dropdown-toggle" role="button" href="#" id="dropdownMenuMusic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-share-square"></i><span>Sociaal</span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuMusic">
+                        <h6 class="dropdown-header"><i class="fas fa-share-square"></i> Sociaal</h6>
+                        <a class="dropdown-item" href="./update_page.php">Updates</a>
+                        <a class="dropdown-item" href="./add_new_mail.php">Mail</a>
+                        <a class="dropdown-item disabled" href="#">Webshop</a>
+                    </div>
+                </li>
                 <?php
                 $link = "./logout.php?USERNAME={$getValue['USERNAME']}"
                 ?>
                 <li class="nav-item" role="presentation"><a class="nav-link" href=<?php echo $link?>><i
-                            class="far fa-user-circle"></i><span>Logout</span></a></li>
+                                class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
 
                 <li class="nav-item" role="presentation"><a class="nav-link" href="https://hetplatenhuis.nl/"><i
-                            class="fas fa-bars"></i><span>Naar de site</span></a></li>
+                                class="fas fa-bars"></i><span>Naar de site</span></a></li>
             </ul>
             <div class="text-center d-none d-md-inline">
                 <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
