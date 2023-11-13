@@ -4,10 +4,10 @@
  */
 
 //These strings are for the external database
-define ('EXTERNAL_HOST', 'hetplatenhuis.nl:3306');
-define('EXTERNAL_USER', 'DB-platenhuis');
-define('EXTERNAL_PASSWORD', 'b6p&0slF&&Ht');
-define('EXTERNAL_DATABASE', 'DATABASE_PLATENHUIS');
+define ('EXTERNAL_HOST', 'localhost:3306');
+define('EXTERNAL_USER', 'platenhuis');
+define('EXTERNAL_PASSWORD', 'Jj2XZnFe2BcRLtnVpbRU');
+define('EXTERNAL_DATABASE', 'platenhuis');
 
 //These strings are for the local database
 define ('LOCAL_HOST', 'localhost:3307');
